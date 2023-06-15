@@ -1,0 +1,75 @@
+.thank-you-page {
+  background-image: url(../images/thank-you-bg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-attachment: fixed;
+  margin-top: 90px;
+  min-height: auto; }
+  .thank-you-page__content {
+    padding: 100px 0 50px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 700px;
+    margin: auto; }
+    .thank-you-page__content__title {
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 38px;
+      text-align: center;
+      color: #FDBB2C; }
+    .thank-you-page__content__description {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: #FFFFFF; }
+    .thank-you-page__content__username {
+      background: rgba(255, 255, 255, 0.13);
+      border-radius: 4px;
+      width: 100%;
+      min-height: 55px;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      color: #FDBB2C; }
+    .thank-you-page__content__action {
+      width: 100%;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      gap: 25px; }
+      .thank-you-page__content__action .btn {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        border-radius: 4px;
+        min-height: 50px;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        width: 100%; }
+        .thank-you-page__content__action .btn-warning {
+          background: #FDBB2C;
+          color: #000000; }
+    .thank-you-page__content__help {
+      padding-top: 90px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      color: #FFFFFF; }
+      .thank-you-page__content__help a {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #0089FF; }

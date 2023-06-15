@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+  <meta charset="UTF-8" />
+  
+  <!-- build -->
+  <base href = "." />
+
+  <!-- server -->
+  <!-- <base href = "/" /> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#FDBB2C" >
+  <title>UWIN - History</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.jpg">
+  <meta name="msapplication-TileColor" content="#000B26">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000B26">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick-theme.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+  <body>
+    
+    <!-- Content -->
+    <section class="main deposit-page">
+      <div id="loadingDiv"><div class="loader">Loading...</div></div>
+
+<nav id="myNavbar" class="navbar fixed-top navbar-light">
+  <div class="container content">
+    <div>
+       
+      <a href="./">
+        <img class="content__logo" src="assets/icons/logo.png" alt="" />
+      </a>
+      
+    </div>
+    <div class="d-flex justify-content-end align-items-center">
+      <button type="button" class="btn btn-language">中</button>
+      
+      <button type="button" class="btn btn-newbie p-0 me-3 pt-1" data-bs-toggle="modal" data-bs-target="#newbieModal">
+        <img class="h-100" src="assets/images/newbie-icon.png" alt="" />
+      </button>
+      
+      
+      
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Basic mixed styles example"
+      >
+        <a href="./deposit.html" class="btn btn-secondary btn-currency">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-wallet.svg"
+            alt=""
+          />
+          <span>SGD 5,000,000</span>
+        </a>
+        <a href="./deposit.html" class="btn btn-warning btn-add">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-plus.svg"
+            alt=""
+          />
+        </a>
+      </div>
+       
+      
+      <li class="nav-item dropdown list-unstyled avatar-dropdown">
+        <a
+          class="nav-link pe-0"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img class="content__logo" src="assets/icons/avatar.svg" alt="" />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item divider" href="./my-account.html">
+              <div class="d-flex">
+                <img class="close-nav" src="assets/icons/avatar.svg" alt="" />
+                <div class="ps-2">
+                  <div class="fs-16px" data-i18n="menu.Welcome"></div>
+                  <span class="text-primary fs-12px" data-i18n="menu.View_my_account"></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <img src="assets/icons/infomation.svg" alt="" />
+              <span data-i18n="menu.Information"></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item country-name" data-bs-toggle="collapse" href="#collapseCountry" role="button" aria-expanded="false" aria-controls="collapseCountry">
+              <img src="assets/icons/country.svg" alt="" />
+              <div class="d-flex justify-content-between w-inherit">
+                <div>
+                  <div data-i18n="menu.Country"></div>
+                  <div class="fs-12px text-muted current-country" data-i18n="menu.Uwin33_Singapore"></div>
+                </div>
+                <img class="pull-right" src="assets/icons/down-white.svg" alt="" />
+              </div>
+            </a>
+            <div class="collapse" id="collapseCountry">
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Singapore" role="button">
+                <img src="assets/images/Uwin33_Singapore.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Singapore"></span>
+              </a>
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Malaysia" role="button">
+                <img src="assets/images/Uwin33_Malaysia.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Malaysia"></span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="./login.html">
+              <div class="btn btn-warning w-100 d-flex align-items-center justify-content-center" data-i18n="menu.Logout"></div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-animated">
+      <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();">
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+      </marquee>
+    </div>
+  </div>
+</nav>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="pleaseLoginFirstModal"
+  tabindex="-1"
+  aria-labelledby="pleaseLoginFirstModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="title" data-i18n="Please_Login_First_to_Play_Game"></div>
+        <div class="text mb-3 mt-4" data-i18n="Please_Login_First_to_Play_Game_description"></div>
+        <div class="action">
+          <a href="./register.html" class="btn btn-light w-100" data-i18n="Register"></a>
+          <a href="./login.html" class="btn btn-warning btn-confirm w-100" data-i18n="Login"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+
+
+<!-- NEWBIE MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieModal"
+  tabindex="-1"
+  aria-labelledby="newbieModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./deposit.html" class="btn btn-warning" data-i18n="home_page.Deposit_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieWithoutLoginModal"
+  tabindex="-1"
+  aria-labelledby="newbieWithoutLoginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation_without_login"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des_without_login"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./register.html" class="btn btn-warning" data-i18n="home_page.Register_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWBIE MODAL -->
+      <div class="deposit-page__content container">
+
+        <div class="layout row">
+  <div class="left col-2">
+    <div class="left-menu">
+  <div class="list-group divider">
+    <a
+      href="./index.html"
+      class="list-group-item list-group-item-action "
+      aria-current="true"
+    >
+      <div class="img">
+        <img src="assets/icons/footer-home.png" alt="" />
+        <img class="active" src="assets/icons/footer-home-active.png" alt="" />
+      </div>
+      <div class="text" data-i18n="footer.HOME"></div>
+    </a>
+    <a href="./deposit.html" class="list-group-item list-group-item-action active">
+      <div class="img">
+        <img src="assets/icons/footer-wallet.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-wallet-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.WALLET"></div>
+    </a>
+    <a href="./promotion.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-promotion.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-promotion-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.PROMOTION"></div>
+    </a>
+    <a href="./live-chat.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-livechat.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-livechat-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.LIVE_CHAT"></div>
+    </a>
+  </div>
+  <div class="list-group pt-3">
+    <a href="./slot.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/slot.svg" alt="" />
+      <span data-i18n="menu.Slot"></span>
+    </a>
+    <a href="./casino.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/casino.svg" alt="" />
+      <span data-i18n="menu.Casino"></span>
+    </a>
+    <a href="./sport.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/sport.svg" alt="" />
+      <span data-i18n="Sport_E_sport"></span>
+    </a>
+    <a href="./arcade.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/arcade.svg" alt="" />
+      <span data-i18n="menu.Arcade"></span>
+    </a>
+    <a href="./4d.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/4d.svg" alt="" />
+      <span data-i18n="menu.4D"></span>
+    </a>
+    <a href="./voucher.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/voucher.svg" alt="" />
+      <span data-i18n="voucher_page.Redeem_Voucher"></span>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="content col-7">
+    <!-- <ul class="nav nav-tabs" id="mainTab" role="tablist" data-aos="fade-in">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="deposit-section-tab" data-bs-toggle="tab" data-bs-target="#deposit-section" type="button" role="tab" aria-controls="deposit-section" aria-selected="true" data-i18n="Deposit"></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="withdrawal-section-tab" data-bs-toggle="tab" data-bs-target="#withdrawal-section" type="button" role="tab" aria-controls="withdrawal-section" aria-selected="false" data-i18n="Withdrawal"></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="transfer-section-tab" data-bs-toggle="tab" data-bs-target="#transfer-section" type="button" role="tab" aria-controls="transfer-section" aria-selected="false" data-i18n="Transfer"></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="history-section-tab" data-bs-toggle="tab" data-bs-target="#history-section" type="button" role="tab" aria-controls="history-section" aria-selected="false" data-i18n="History"></button>
+  </li>
+</ul> -->
+<div class="">
+  <ul class="nav nav-tabs" id="mainTab" role="tablist" data-aos="fade-in">
+    <li class="nav-item" role="presentation">
+      <a href="./deposit.html" class="nav-link" id="deposit-section-tab" data-i18n="Deposit"></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a href="./withdrawal.html" class="nav-link" id="withdrawal-section-tab" data-i18n="Withdrawal"></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a href="./transfer.html" class="nav-link" id="transfer-section-tab" data-i18n="Transfer"></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a href="./history.html" class="nav-link active" id="history-section-tab" data-i18n="History"></a>
+    </li>
+  </ul>
+</div>
+
+
+<div class="tab-content" id="mainContent">
+  <!-- <div class="tab-pane fade" id="deposit-section" role="tabpanel" aria-labelledby="deposit-section-tab">
+    <div class="">
+      deposit-section
+    </div>
+  </div> -->
+  <!-- <div class="tab-pane fade" id="withdrawal-section" role="tabpanel" aria-labelledby="withdrawal-section-tab">
+    <div class="">
+      withdrawal-section
+    </div>
+  </div> -->
+  <!-- <div class="tab-pane fade" id="transfer-section" role="tabpanel" aria-labelledby="transfer-section-tab">
+    <div class="">
+      transfer-section
+    </div>
+  </div> -->
+  <div class="tab-pane fade show active" id="history-section" role="tabpanel" aria-labelledby="history-section-tab">
+    <!-- history-section -->
+    <ul class="nav nav-tabs" id="historyTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="history-transaction-tab" data-bs-toggle="tab" data-bs-target="#history-transaction" type="button" role="tab" aria-controls="history-transaction" aria-selected="true" data-i18n="deposit_page.Transaction"></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="history-betting-record-tab" data-bs-toggle="tab" data-bs-target="#history-betting-record" type="button" role="tab" aria-controls="history-betting-record" aria-selected="false" data-i18n="deposit_page.Betting_Record"></button>
+  </li>
+</ul>
+<div class="tab-content" id="historyTabContent">
+  <div class="tab-pane fade show active" id="history-transaction" role="tabpanel" aria-labelledby="history-transaction-tab">
+    <form class="filter">
+  <div class="filter__container">
+    <select class="form-select" required>
+      <option value="" data-i18n="deposit_page.Type_Selection" selected></option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <div class="filter__container">
+    <div class="input-group">
+      <input type="text" class="form-control" data-i18n="deposit_page.Date_Range" data-i18n-attr="placeholder" />
+      <span class="input-group-text" data-i18n="deposit_page.To"></span>
+      <input type="text" class="form-control" data-i18n="deposit_page.Date_Range" data-i18n-attr="placeholder"/>
+    </div>
+  </div>
+  <div class="filter__container">
+    <button type="button" class="btn btn-warning" data-i18n="deposit_page.Search"></button>
+  </div>
+</form>
+
+<div class="history-transaction-container">
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Transfer"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status danger" data-i18n="deposit_page.Rejected"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Deposit"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status warning" data-i18n="deposit_page.Pending"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Promotion"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status success" data-i18n="deposit_page.Approved"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Withdraw"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status success" data-i18n="deposit_page.Approved"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Transfer"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status danger" data-i18n="deposit_page.Rejected"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Promotion"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status warning" data-i18n="deposit_page.Pending"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Withdraw"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status success" data-i18n="deposit_page.Approved"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Deposit"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status warning" data-i18n="deposit_page.Pending"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Transfer"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status warning" data-i18n="deposit_page.Pending"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+  <div class="history-transaction-container__item">
+    <div class="history-transaction-container__item__left">
+      <div class="title" data-i18n="deposit_page.Deposit"></div>
+      <div class="currency">SGD 5,000.00</div>
+    </div>
+    <div class="history-transaction-container__item__right">
+      <div class="status warning" data-i18n="deposit_page.Pending"></div>
+      <div class="date">11-02-2022, 12:12</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="history-transaction-pagination">
+  <a class="btn btn-sm btn-secondary" href="#">
+    <img src="assets/icons/pagination-left.svg" alt="" />
+  </a>
+  <a class="btn btn-sm btn-link active" href="#">1</a>
+  <a class="btn btn-sm btn-link" href="#">2</a>
+  <a class="btn btn-sm btn-link" href="#">3</a>
+  <a class="btn btn-sm btn-link disabled" href="#">...</a>
+  <a class="btn btn-sm btn-secondary" href="#">
+    <img src="assets/icons/pagination-right.svg" alt="" />
+  </a>
+</div>
+  </div>
+  <div class="tab-pane fade" id="history-betting-record" role="tabpanel" aria-labelledby="history-betting-record-tab">
+    <form class="filter">
+  <div class="filter__container">
+    <div class="input-group">
+      <input type="text" class="form-control" data-i18n="deposit_page.Date_Range" data-i18n-attr="placeholder" />
+      <span class="input-group-text" data-i18n="deposit_page.To"></span>
+      <input type="text" class="form-control" data-i18n="deposit_page.Date_Range" data-i18n-attr="placeholder"/>
+    </div>
+  </div>
+  <div class="filter__container">
+    <button type="button" class="btn btn-warning" data-i18n="deposit_page.Search"></button>
+  </div>
+</form>
+
+<div class="table-responsive betting-record-table">
+  <table id="accordionParent" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col" data-i18n="deposit_page.Date" class="text-start"></th>
+        <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+        <th scope="col" data-i18n="deposit_page.Turnover"></th>
+        <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+        <th scope="col" data-i18n="deposit_page.Realbet"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-i18n="deposit_page.Total" class="text-start"></td>
+        <td class="warning">72</td>
+        <td class="warning">281.64</td>
+        <td class="danger">-49.93</td>
+        <td class="warning">279.04</td>
+      </tr>
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse1">2022/05/04</a>
+        </td>
+        <td>5</td>
+        <td>13.00</td>
+        <td>-13.00</td>
+        <td>13.00</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse2">2022/05/09</a>
+        </td>
+        <td>4</td>
+        <td>40.00</td>
+        <td>0.00</td>
+        <td>40.00</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse3">2022/05/17</a>
+        </td>
+        <td>13</td>
+        <td>47.30</td>
+        <td>-36.35</td>
+        <td>45.30</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse4">2022/05/18</a>
+        </td>
+        <td>2</td>
+        <td>4.00</td>
+        <td>-0.10</td>
+        <td>4.00</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse5">2022/05/19</a>
+        </td>
+        <td>37</td>
+        <td>18.34</td>
+        <td>-5.48</td>
+        <td>17.74</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse6">2022/05/21</a>
+        </td>
+        <td>1</td>
+        <td>85.00</td>
+        <td>35.00</td>
+        <td>85.00</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse7">2022/05/24</a>
+        </td>
+        <td>9</td>
+        <td>72.00</td>
+        <td>-22.00</td>
+        <td>72.00</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="text-start">
+          <a href="#" class="show-detail" data-bs-toggle="collapse" data-bs-target="#collapse8">2022/05/31</a>
+        </td>
+        <td>1</td>
+        <td>2.00</td>
+        <td>-2.00</td>
+        <td>2.00</td>
+      </tr>
+
+      <tr>
+        <td colspan="5" class="p-0">
+          <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionParent">
+            <div class="betting-record-table-collapse">
+  <div class="card betting-record-table-collapse__content">
+    <div class="card-header">
+      <div class="title">
+        <span>1</span>
+        <div>SG Slots</div>
+      </div>
+      <div class="date">26-05-2022,14:57:08</div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="deposit_page.Transaction_Court"></th>
+            <th scope="col" data-i18n="deposit_page.Turnover"></th>
+            <th scope="col" data-i18n="deposit_page.Win_Lose"></th>
+            <th scope="col" data-i18n="deposit_page.Realbet"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5</td>
+            <td>13.00</td>
+            <td class="danger">-13.00</td>
+            <td>13.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="./history-detail.html" class="btn btn-link" data-i18n="deposit_page.More_Details"></a>
+    </div>
+  </div>
+</div>
+          </div>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+<div class="history-transaction-pagination">
+  <a class="btn btn-sm btn-secondary" href="#">
+    <img src="assets/icons/pagination-left.svg" alt="" />
+  </a>
+  <a class="btn btn-sm btn-link active" href="#">1</a>
+  <a class="btn btn-sm btn-link" href="#">2</a>
+  <a class="btn btn-sm btn-link" href="#">3</a>
+  <a class="btn btn-sm btn-link disabled" href="#">...</a>
+  <a class="btn btn-sm btn-secondary" href="#">
+    <img src="assets/icons/pagination-right.svg" alt="" />
+  </a>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+  <div class="right col-3">
+    
+  </div>
+</div>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="vpnModal"
+  tabindex="-1"
+  aria-labelledby="vpnModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="mx-auto my-3" src="assets/images/vpn-icon.svg" alt="" />
+        <div class="title text-white" data-i18n="vpn_modal_title"></div>
+        <div class="text mb-3 mt-4 text-muted" data-i18n="vpn_modal_title_description"></div>
+        <div class="action">
+          <a href="" class="btn btn-warning btn-confirm px-4" data-i18n="Open_Chat"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+        
+      </div>
+
+      <!-- MODAL -->
+      <div id="copiedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-body" data-i18n="Copied"></div>
+</div>
+      <!-- Modal -->
+<div
+  class="modal fade alert"
+  id="restoreModal"
+  tabindex="-1"
+  aria-labelledby="restoreModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static" 
+  data-bs-keyboard="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="assets/icons/restore.svg" />
+        <div class="text mt-4" data-i18n="restore_message"></div>
+        <!-- <div class="action"> -->
+          <!-- <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="voucher_page.Ok"></button> -->
+          <!-- <a href="./history.html" class="btn btn-warning btn-confirm w-50" data-i18n="voucher_page.Ok"></a> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- MODAL -->
+
+    </section>
+    
+    <!-- SCRIPT -->
+<!-- JQUERY -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"
+  crossorigin="anonymous"
+></script>
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- Translator -->
+<script src="assets/library/translator.min.js" defer ></script>
+<!-- <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js" defer></script> -->
+<!-- Bootstrap Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/library/slick/slick.min.js"></script>
+
+<!-- CUSTOM -->
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/bundle.js" defer></script>
+
+  </body>
+</html>

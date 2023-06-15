@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+  <meta charset="UTF-8" />
+  
+  <!-- build -->
+  <base href = "." />
+
+  <!-- server -->
+  <!-- <base href = "/" /> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#FDBB2C" >
+  <title>UWIN - Voucher</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.jpg">
+  <meta name="msapplication-TileColor" content="#000B26">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000B26">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick-theme.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+  <body>
+    
+    <!-- Content -->
+    <section class="main voucher-page">
+      <div id="loadingDiv"><div class="loader">Loading...</div></div>
+
+<nav id="myNavbar" class="navbar fixed-top navbar-light">
+  <div class="container content">
+    <div>
+       
+      <a href="./">
+        <img class="content__logo" src="assets/icons/logo.png" alt="" />
+      </a>
+      
+    </div>
+    <div class="d-flex justify-content-end align-items-center">
+      <button type="button" class="btn btn-language">中</button>
+      
+      <button type="button" class="btn btn-newbie p-0 me-3 pt-1" data-bs-toggle="modal" data-bs-target="#newbieModal">
+        <img class="h-100" src="assets/images/newbie-icon.png" alt="" />
+      </button>
+      
+      
+      
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Basic mixed styles example"
+      >
+        <a href="./deposit.html" class="btn btn-secondary btn-currency">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-wallet.svg"
+            alt=""
+          />
+          <span>SGD 5,000,000</span>
+        </a>
+        <a href="./deposit.html" class="btn btn-warning btn-add">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-plus.svg"
+            alt=""
+          />
+        </a>
+      </div>
+       
+      
+      <li class="nav-item dropdown list-unstyled avatar-dropdown">
+        <a
+          class="nav-link pe-0"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img class="content__logo" src="assets/icons/avatar.svg" alt="" />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item divider" href="./my-account.html">
+              <div class="d-flex">
+                <img class="close-nav" src="assets/icons/avatar.svg" alt="" />
+                <div class="ps-2">
+                  <div class="fs-16px" data-i18n="menu.Welcome"></div>
+                  <span class="text-primary fs-12px" data-i18n="menu.View_my_account"></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <img src="assets/icons/infomation.svg" alt="" />
+              <span data-i18n="menu.Information"></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item country-name" data-bs-toggle="collapse" href="#collapseCountry" role="button" aria-expanded="false" aria-controls="collapseCountry">
+              <img src="assets/icons/country.svg" alt="" />
+              <div class="d-flex justify-content-between w-inherit">
+                <div>
+                  <div data-i18n="menu.Country"></div>
+                  <div class="fs-12px text-muted current-country" data-i18n="menu.Uwin33_Singapore"></div>
+                </div>
+                <img class="pull-right" src="assets/icons/down-white.svg" alt="" />
+              </div>
+            </a>
+            <div class="collapse" id="collapseCountry">
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Singapore" role="button">
+                <img src="assets/images/Uwin33_Singapore.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Singapore"></span>
+              </a>
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Malaysia" role="button">
+                <img src="assets/images/Uwin33_Malaysia.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Malaysia"></span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="./login.html">
+              <div class="btn btn-warning w-100 d-flex align-items-center justify-content-center" data-i18n="menu.Logout"></div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-animated">
+      <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();">
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+      </marquee>
+    </div>
+  </div>
+</nav>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="pleaseLoginFirstModal"
+  tabindex="-1"
+  aria-labelledby="pleaseLoginFirstModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="title" data-i18n="Please_Login_First_to_Play_Game"></div>
+        <div class="text mb-3 mt-4" data-i18n="Please_Login_First_to_Play_Game_description"></div>
+        <div class="action">
+          <a href="./register.html" class="btn btn-light w-100" data-i18n="Register"></a>
+          <a href="./login.html" class="btn btn-warning btn-confirm w-100" data-i18n="Login"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+
+
+<!-- NEWBIE MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieModal"
+  tabindex="-1"
+  aria-labelledby="newbieModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./deposit.html" class="btn btn-warning" data-i18n="home_page.Deposit_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieWithoutLoginModal"
+  tabindex="-1"
+  aria-labelledby="newbieWithoutLoginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation_without_login"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des_without_login"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./register.html" class="btn btn-warning" data-i18n="home_page.Register_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWBIE MODAL -->
+      <div class="voucher-page__content container">
+
+        <div class="layout row">
+  <div class="left col-2">
+    <div class="left-menu">
+  <div class="list-group divider">
+    <a
+      href="./index.html"
+      class="list-group-item list-group-item-action active"
+      aria-current="true"
+    >
+      <div class="img">
+        <img src="assets/icons/footer-home.png" alt="" />
+        <img class="active" src="assets/icons/footer-home-active.png" alt="" />
+      </div>
+      <div class="text" data-i18n="footer.HOME"></div>
+    </a>
+    <a href="./deposit.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-wallet.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-wallet-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.WALLET"></div>
+    </a>
+    <a href="./promotion.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-promotion.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-promotion-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.PROMOTION"></div>
+    </a>
+    <a href="./live-chat.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-livechat.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-livechat-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.LIVE_CHAT"></div>
+    </a>
+  </div>
+  <div class="list-group pt-3">
+    <a href="./slot.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/slot.svg" alt="" />
+      <span data-i18n="menu.Slot"></span>
+    </a>
+    <a href="./casino.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/casino.svg" alt="" />
+      <span data-i18n="menu.Casino"></span>
+    </a>
+    <a href="./sport.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/sport.svg" alt="" />
+      <span data-i18n="Sport_E_sport"></span>
+    </a>
+    <a href="./arcade.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/arcade.svg" alt="" />
+      <span data-i18n="menu.Arcade"></span>
+    </a>
+    <a href="./4d.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/4d.svg" alt="" />
+      <span data-i18n="menu.4D"></span>
+    </a>
+    <a href="./voucher.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/voucher.svg" alt="" />
+      <span data-i18n="voucher_page.Redeem_Voucher"></span>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="content col-7">
+    <a id="back_url" class="d-flex gap-4 align-items-center text-white mb-5" href="./">
+  <img src="assets/icons/left-white.svg" alt="" />
+  <div class="title" data-i18n="voucher_page.Redeem_Voucher"></div>
+</a>
+
+<form class="voucher-page__content__form" id="formVoucher" data-modal="successRedeemedModal" data-aos="fade-in">
+  <div class="voucher-page__content__form__input">
+    <label data-i18n="voucher_page.Voucher_Code" class="form-label"></label>
+    <input type="text" name="voucher" class="form-control" data-i18n-attr="placeholder" data-i18n="voucher_page.Enter_your_voucher_code"  />
+    <div class="form-text d-none" data-i18n="voucher_page.Please_enter_the_voucher_code"></div>
+  </div>
+  <button type="submit" class="btn btn-warning" data-i18n="voucher_page.Redeem"></button>
+</form>
+
+<div class="voucher-page__content__empty">
+  <img src="assets/icons/voucher-empty.svg" />
+  <div data-i18n="voucher_page.No_voucher_records_found"></div>
+</div>
+  </div>
+  <div class="right col-3">
+    
+  </div>
+</div>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="vpnModal"
+  tabindex="-1"
+  aria-labelledby="vpnModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="mx-auto my-3" src="assets/images/vpn-icon.svg" alt="" />
+        <div class="title text-white" data-i18n="vpn_modal_title"></div>
+        <div class="text mb-3 mt-4 text-muted" data-i18n="vpn_modal_title_description"></div>
+        <div class="action">
+          <a href="" class="btn btn-warning btn-confirm px-4" data-i18n="Open_Chat"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+        
+      </div>
+
+      <!-- MODAL -->
+      <!-- Modal -->
+<div
+  class="modal fade alert"
+  id="successRedeemedModal"
+  tabindex="-1"
+  aria-labelledby="successRedeemedModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="assets/icons/success.svg" />
+        <div class="text mb-3 mt-4" data-i18n="voucher_page.Voucher_successfully_redeemed"></div>
+        <div class="action">
+          <!-- <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="voucher_page.Ok"></button> -->
+          <a href="./voucher-1.html" class="btn btn-warning btn-confirm w-50" data-i18n="voucher_page.Ok"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- MODAL -->
+
+    </section>
+    
+    <!-- SCRIPT -->
+<!-- JQUERY -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"
+  crossorigin="anonymous"
+></script>
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- Translator -->
+<script src="assets/library/translator.min.js" defer ></script>
+<!-- <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js" defer></script> -->
+<!-- Bootstrap Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/library/slick/slick.min.js"></script>
+
+<!-- CUSTOM -->
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/bundle.js" defer></script>
+
+  </body>
+</html>

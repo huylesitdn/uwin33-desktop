@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+  <meta charset="UTF-8" />
+  
+  <!-- build -->
+  <base href = "." />
+
+  <!-- server -->
+  <!-- <base href = "/" /> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#FDBB2C" >
+  <title>UWIN - Withdrawal</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.jpg">
+  <meta name="msapplication-TileColor" content="#000B26">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000B26">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick-theme.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+  <body>
+    
+    <!-- Content -->
+    <section class="main deposit-page">
+      <div id="loadingDiv"><div class="loader">Loading...</div></div>
+
+<nav id="myNavbar" class="navbar fixed-top navbar-light">
+  <div class="container content">
+    <div>
+       
+      <a href="./">
+        <img class="content__logo" src="assets/icons/logo.png" alt="" />
+      </a>
+      
+    </div>
+    <div class="d-flex justify-content-end align-items-center">
+      <button type="button" class="btn btn-language">中</button>
+      
+      <button type="button" class="btn btn-newbie p-0 me-3 pt-1" data-bs-toggle="modal" data-bs-target="#newbieModal">
+        <img class="h-100" src="assets/images/newbie-icon.png" alt="" />
+      </button>
+      
+      
+      
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Basic mixed styles example"
+      >
+        <a href="./deposit.html" class="btn btn-secondary btn-currency">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-wallet.svg"
+            alt=""
+          />
+          <span>SGD 5,000,000</span>
+        </a>
+        <a href="./deposit.html" class="btn btn-warning btn-add">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-plus.svg"
+            alt=""
+          />
+        </a>
+      </div>
+       
+      
+      <li class="nav-item dropdown list-unstyled avatar-dropdown">
+        <a
+          class="nav-link pe-0"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img class="content__logo" src="assets/icons/avatar.svg" alt="" />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item divider" href="./my-account.html">
+              <div class="d-flex">
+                <img class="close-nav" src="assets/icons/avatar.svg" alt="" />
+                <div class="ps-2">
+                  <div class="fs-16px" data-i18n="menu.Welcome"></div>
+                  <span class="text-primary fs-12px" data-i18n="menu.View_my_account"></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <img src="assets/icons/infomation.svg" alt="" />
+              <span data-i18n="menu.Information"></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item country-name" data-bs-toggle="collapse" href="#collapseCountry" role="button" aria-expanded="false" aria-controls="collapseCountry">
+              <img src="assets/icons/country.svg" alt="" />
+              <div class="d-flex justify-content-between w-inherit">
+                <div>
+                  <div data-i18n="menu.Country"></div>
+                  <div class="fs-12px text-muted current-country" data-i18n="menu.Uwin33_Singapore"></div>
+                </div>
+                <img class="pull-right" src="assets/icons/down-white.svg" alt="" />
+              </div>
+            </a>
+            <div class="collapse" id="collapseCountry">
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Singapore" role="button">
+                <img src="assets/images/Uwin33_Singapore.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Singapore"></span>
+              </a>
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Malaysia" role="button">
+                <img src="assets/images/Uwin33_Malaysia.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Malaysia"></span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="./login.html">
+              <div class="btn btn-warning w-100 d-flex align-items-center justify-content-center" data-i18n="menu.Logout"></div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-animated">
+      <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();">
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+      </marquee>
+    </div>
+  </div>
+</nav>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="pleaseLoginFirstModal"
+  tabindex="-1"
+  aria-labelledby="pleaseLoginFirstModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="title" data-i18n="Please_Login_First_to_Play_Game"></div>
+        <div class="text mb-3 mt-4" data-i18n="Please_Login_First_to_Play_Game_description"></div>
+        <div class="action">
+          <a href="./register.html" class="btn btn-light w-100" data-i18n="Register"></a>
+          <a href="./login.html" class="btn btn-warning btn-confirm w-100" data-i18n="Login"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+
+
+<!-- NEWBIE MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieModal"
+  tabindex="-1"
+  aria-labelledby="newbieModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./deposit.html" class="btn btn-warning" data-i18n="home_page.Deposit_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieWithoutLoginModal"
+  tabindex="-1"
+  aria-labelledby="newbieWithoutLoginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation_without_login"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des_without_login"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./register.html" class="btn btn-warning" data-i18n="home_page.Register_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWBIE MODAL -->
+      <div class="deposit-page__content container">
+
+        <div class="layout row">
+  <div class="left col-2">
+    <div class="left-menu">
+  <div class="list-group divider">
+    <a
+      href="./index.html"
+      class="list-group-item list-group-item-action "
+      aria-current="true"
+    >
+      <div class="img">
+        <img src="assets/icons/footer-home.png" alt="" />
+        <img class="active" src="assets/icons/footer-home-active.png" alt="" />
+      </div>
+      <div class="text" data-i18n="footer.HOME"></div>
+    </a>
+    <a href="./deposit.html" class="list-group-item list-group-item-action active">
+      <div class="img">
+        <img src="assets/icons/footer-wallet.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-wallet-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.WALLET"></div>
+    </a>
+    <a href="./promotion.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-promotion.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-promotion-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.PROMOTION"></div>
+    </a>
+    <a href="./live-chat.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-livechat.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-livechat-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.LIVE_CHAT"></div>
+    </a>
+  </div>
+  <div class="list-group pt-3">
+    <a href="./slot.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/slot.svg" alt="" />
+      <span data-i18n="menu.Slot"></span>
+    </a>
+    <a href="./casino.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/casino.svg" alt="" />
+      <span data-i18n="menu.Casino"></span>
+    </a>
+    <a href="./sport.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/sport.svg" alt="" />
+      <span data-i18n="Sport_E_sport"></span>
+    </a>
+    <a href="./arcade.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/arcade.svg" alt="" />
+      <span data-i18n="menu.Arcade"></span>
+    </a>
+    <a href="./4d.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/4d.svg" alt="" />
+      <span data-i18n="menu.4D"></span>
+    </a>
+    <a href="./voucher.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/voucher.svg" alt="" />
+      <span data-i18n="voucher_page.Redeem_Voucher"></span>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="content col-7">
+    <!-- <ul class="nav nav-tabs" id="mainTab" role="tablist" data-aos="fade-in">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="deposit-section-tab" data-bs-toggle="tab" data-bs-target="#deposit-section" type="button" role="tab" aria-controls="deposit-section" aria-selected="true" data-i18n="Deposit"></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="withdrawal-section-tab" data-bs-toggle="tab" data-bs-target="#withdrawal-section" type="button" role="tab" aria-controls="withdrawal-section" aria-selected="false" data-i18n="Withdrawal"></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="transfer-section-tab" data-bs-toggle="tab" data-bs-target="#transfer-section" type="button" role="tab" aria-controls="transfer-section" aria-selected="false" data-i18n="Transfer"></button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="history-section-tab" data-bs-toggle="tab" data-bs-target="#history-section" type="button" role="tab" aria-controls="history-section" aria-selected="false" data-i18n="History"></button>
+  </li>
+</ul> -->
+<div class="">
+  <ul class="nav nav-tabs" id="mainTab" role="tablist" data-aos="fade-in">
+    <li class="nav-item" role="presentation">
+      <a href="./deposit.html" class="nav-link" id="deposit-section-tab" data-i18n="Deposit"></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a href="./withdrawal.html" class="nav-link active" id="withdrawal-section-tab" data-i18n="Withdrawal"></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a href="./transfer.html" class="nav-link" id="transfer-section-tab" data-i18n="Transfer"></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a href="./history.html" class="nav-link" id="history-section-tab" data-i18n="History"></a>
+    </li>
+  </ul>
+</div>
+
+
+<div class="tab-content" id="mainContent">
+  <!-- <div class="tab-pane fade" id="deposit-section" role="tabpanel" aria-labelledby="deposit-section-tab">
+    <div class="">
+      deposit-section
+    </div>
+  </div> -->
+  <div class="tab-pane fade show active" id="withdrawal-section" role="tabpanel" aria-labelledby="withdrawal-section-tab">
+    <div class="">
+      <div class="main-wallet" data-aos="fade-up">
+  <div class="main-wallet__top">
+    <div>
+      <div class="main-wallet__top__title" data-i18n="deposit_page.Main_Wallet_Balance"></div>
+      <div class="main-wallet__top__currency">
+        SGD 5,000,000.00 <img src="assets/icons/refresh.svg" alt="" />
+      </div>
+    </div>
+    <div class="main-wallet__top__action">
+      <button class="btn btn-secondary" data-i18n="Restore" data-bs-toggle="modal" data-bs-target="#restoreModal"></button>
+    </div>
+  </div>
+  <div class="main-wallet__footer">
+    <div class="main-wallet__footer__currency">SGD 1000.00</div>
+    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#gameBalanceModal" class="main-wallet__footer__description" data-i18n="deposit_page.Show_Game_Balance"></a>
+  </div>
+</div>
+
+<!-- Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="gameBalanceModal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="gameBalanceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="game-balance-content">
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title1"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title2"></div>
+          <div class="currency" data-i18n="deposit_page.Under_Maintenance"></div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceFailModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title3"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title4"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title5"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title6"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title7"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title8"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+        
+        <div class="game-balance-content__item">
+          <div class="title" data-i18n="deposit_page.game_balance_title9"></div>
+          <div class="currency">SGD 0.00</div>
+          <div class="action">
+            <button type="button" class="btn btn-warning" data-i18n="deposit_page.All_In" data-bs-toggle="modal" data-bs-target="#transferBalanceSuccessModal"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="transferBalanceSuccessModal"
+  tabindex="-1"
+  aria-labelledby="transferBalanceSuccessModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="assets/icons/success.svg" />
+        <div class="text mb-3 mt-4" data-i18n="deposit_page.Transfer_Successful"></div>
+        <div class="action">
+          <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="voucher_page.Ok"></button>
+          <!-- <a href="./history.html" class="btn btn-warning btn-confirm w-50" data-i18n="voucher_page.Ok"></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="transferBalanceFailModal"
+  tabindex="-1"
+  aria-labelledby="transferBalanceFailModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="assets/icons/error.svg" />
+        <div class="text mb-3 mt-4" data-i18n="deposit_page.Transfer_fail"></div>
+        <div class="action">
+          <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="voucher_page.Ok"></button>
+          <!-- <a href="./history.html" class="btn btn-warning btn-confirm w-50" data-i18n="voucher_page.Ok"></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+<div data-aos="fade-up">
+  <div class="deposit-content">
+    <ul class="nav nav-tabs" id="depositMainTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="bank-transfer-tab" data-bs-toggle="tab" data-bs-target="#bank-transfer" type="button" role="tab" aria-controls="payment-gateway" aria-selected="true" data-i18n="deposit_page.Bank_Transfer"></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="crypto-tab" data-bs-toggle="tab" data-bs-target="#crypto" type="button" role="tab" aria-controls="crypto" aria-selected="false" data-i18n="deposit_page.Crypto"></button>
+      </li>
+    </ul>
+    <div class="tab-content" id="depositMainContent">
+      <div class="tab-pane fade show active" id="bank-transfer" role="tabpanel" aria-labelledby="bank-transfer-tab">
+        <form id="withdrawalPaymentGatewayForm" class="form pb-5" data-aos="fade-up">
+  <div class="form__container">
+    <label class="form-label" data-i18n="deposit_page.Amount_SGD"></label>
+    <div class="input-group">
+      <input type="text" class="form-control" name="amount_SGD" data-i18n="deposit_page.amount_sgd_placeholder" data-i18n-attr="placeholder" />
+      <button class="btn btn-outline-warning" type="button" data-i18n="deposit_page.all"></button>
+    </div>
+  </div>
+  <div class="form__container">
+    <label class="form-label" data-i18n="deposit_page.Withdrawal_Bank_Type"></label>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" name="btnradioWithdrawalBankType" value="1" id="btnradioExistingBank" autocomplete="off">
+      <label class="btn btn-outline-secondary" for="btnradioExistingBank" data-i18n="deposit_page.Existing_Bank"></label>
+    
+      <input type="radio" class="btn-check" name="btnradioWithdrawalBankType" value="2" id="btnradioNewBank" autocomplete="off" checked>
+      <label class="btn btn-outline-secondary" for="btnradioNewBank" data-i18n="deposit_page.New_Bank"></label>
+    </div>
+  </div>
+
+  <div class="Existing_Bank d-none">
+    <div class="form__container">
+      <label class="form-label" data-i18n="deposit_page.Account_Holder"></label>
+      <input type="text" class="form-control" data-i18n="deposit_page.Enter_Account_Holder" data-i18n-attr="placeholder" value="Aaron Lee" disabled />
+    </div>
+    <div class="form__container">
+      <label class="form-label" data-i18n="deposit_page.Select_Bank"></label>
+      <select class="form-select select-bank2" name="select_bank">
+        <option selected></option>
+        <option value="Maybank_Berhad_848473993287338">Maybank Berhad   848473993287338</option>
+      </select>
+      <div id="selectBankDropdown2"></div>
+    </div>
+    <div class="form__container">
+      <div class="help-text mt-2" data-i18n="deposit_page.withdraw_help_text"></div>
+    </div>
+  </div>
+
+  <div class="New_Bank">
+    <div class="form__container">
+      <label class="form-label" data-i18n="deposit_page.Account_Holder"></label>
+      <input type="text" class="form-control" data-i18n="deposit_page.Enter_Account_Holder" data-i18n-attr="placeholder" value="Aaron Lee" disabled />
+    </div>
+    <div class="form__container">
+      <label class="form-label" data-i18n="deposit_page.Select_Bank"></label>
+      <select class="form-select select-bank3" name="select_bank">
+        <option selected></option>
+        <option value="POSB">POSB</option>
+        <option value="DBS">DBS</option>
+        <option value="UOB">UOB</option>
+        <option value="CIMB SG">CIMB SG</option>
+        <option value="OCBC">OCBC</option>
+        <option value="Maybank Singapore Limited">Maybank Singapore Limited</option>
+        <option value="HSBC">HSBC</option>
+      </select>
+      <div id="selectBankDropdown3"></div>
+    </div>
+    <div class="form__container">
+      <label class="form-label" data-i18n="deposit_page.Bank_Account_Number1"></label>
+      <input type="text" class="form-control" name="bank_account_number" data-i18n="deposit_page.Type_your_account" data-i18n-attr="placeholder" />
+      <div class="help-text" data-i18n="deposit_page.withdraw_help_text"></div>
+    </div>
+  </div>
+
+
+
+  <div class="form__action">
+    <button type="submit" class="btn btn-warning" data-i18n="deposit_page.Add_Bank"></button>
+    <!-- <button type="button" class="btn btn-link" data-i18n="Reset" data-bs-toggle="modal" data-bs-target="#depositFailModal"></button> -->
+    <button type="button" class="btn btn-outline-warning btn-reset-form" data-i18n="Reset" data-form="depositPaymentGatewayForm"></button>
+  </div>
+
+</form>
+      </div>
+      <div class="tab-pane fade" id="crypto" role="tabpanel" aria-labelledby="crypto-tab">
+        <form id="withdrawalCryptoForm" class="form pb-5" data-aos="fade-up">
+  <div class="form__info">
+    <img class="me-2" src="assets/icons/crypto-icon.svg" />
+    <span data-i18n="deposit_page.Current_exchange_rate"></span>
+  </div>
+  <div class="form__container">
+    <div class="d-flex align-items-center justify-content-between">
+      <label class="form-label" data-i18n="deposit_page.Address"></label>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#addAddressModal" class="text-warning text-decoration-underline" data-i18n="deposit_page.Add_New_Address"></a>
+    </div>
+    <select class="form-select select-address" name="select_address">
+      <option></option>
+      <option value="Address1">Address1</option>
+      <option value="Address2">Address2</option>
+    </select>
+    <div id="selectAddressDropdown"></div>
+  </div>
+  <div class="form__container">
+    <label class="form-label" data-i18n="deposit_page.Amount"></label>
+    <div class="input-group p-0">
+      <input type="text" class="form-control" name="amount_SGD" data-i18n="deposit_page.Enter_amount" data-i18n-attr="placeholder" />
+      <span class="input-group-currency" data-i18n="deposit_page.SGD"></span>
+    </div>
+  </div>
+  <div class="form__container">
+    <div class="input-group p-0">
+      <input type="text" class="form-control" name="amount_USDT" data-i18n="deposit_page.Enter_amount" data-i18n-attr="placeholder" />
+      <span class="input-group-currency" data-i18n="deposit_page.USDT"></span>
+    </div>
+  </div>
+
+  <div class="form__action">
+    <button type="submit" class="btn btn-warning" data-i18n="deposit_page.Withdraw"></button>
+    <!-- <button type="button" class="btn btn-link" data-i18n="Reset" data-bs-toggle="modal" data-bs-target="#depositFailModal"></button> -->
+    <button type="button" class="btn btn-outline-warning btn-reset-form" data-i18n="Reset" data-form="depositPaymentGatewayForm"></button>
+  </div>
+
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL -->
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="withdrawalFailModal"
+  tabindex="-1"
+  aria-labelledby="withdrawalFailModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="assets/icons/error.svg" />
+        <div class="text mb-3 mt-4" data-i18n="deposit_page.withdrawal_fail_1"></div>
+        <div class="text mb-2" data-i18n="deposit_page.withdrawal_fail_2"></div>
+        <div class="action">
+          <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="voucher_page.Ok"></button>
+          <!-- <a href="./history.html" class="btn btn-warning btn-confirm w-50" data-i18n="voucher_page.Ok"></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="withdrawalSuccessModal"
+  tabindex="-1"
+  aria-labelledby="withdrawalSuccessModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="assets/icons/success.svg" />
+        <div class="text mb-3 mt-4" data-i18n="deposit_page.withdrawal_success_1"></div>
+        <div class="text mb-2" data-i18n="deposit_page.deposit_success_2"></div>
+        <h2 class="text mb-3 text-warning" data-i18n="deposit_page.deposit_success_3"></h2>
+        <div class="action">
+          <!-- <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="voucher_page.Ok"></button> -->
+          <a href="./history.html" class="btn btn-warning btn-confirm w-50" data-i18n="voucher_page.Ok"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="addAddressModal"
+  tabindex="-1"
+  aria-labelledby="addAddressModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static" data-bs-keyboard="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="addAddressForm" class="form">
+          <div class="title" data-i18n="deposit_page.Add_Address"></div>
+          <div class="form__container mb-3">
+            <label class="form-label" data-i18n="deposit_page.Cryptocurrency"></label>
+            <select class="form-select" name="cryptocurrency">
+              <option value="USDT">USDT</option>
+              <option value="SGD">SGD</option>
+            </select>
+          </div>
+          <div class="form__container mb-3">
+            <label class="form-label" data-i18n="deposit_page.Network"></label>
+            <input type="text" class="form-control" name="network"  />
+          </div>
+          <div class="form__container mb-3">
+            <label class="form-label" data-i18n="deposit_page.Bank_Account_Humber"></label>
+            <input type="text" class="form-control" name="bank-account-humber"  />
+          </div>
+          <div class="action">
+            <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="Save"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+    </div>
+  </div>
+  <!-- <div class="tab-pane fade" id="transfer-section" role="tabpanel" aria-labelledby="transfer-section-tab">
+    transfer-section
+  </div> -->
+  <!-- <div class="tab-pane fade" id="history-section" role="tabpanel" aria-labelledby="history-section-tab">
+    history-section
+  </div> -->
+</div>
+  </div>
+  <div class="right col-3">
+    
+  </div>
+</div>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="vpnModal"
+  tabindex="-1"
+  aria-labelledby="vpnModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="mx-auto my-3" src="assets/images/vpn-icon.svg" alt="" />
+        <div class="title text-white" data-i18n="vpn_modal_title"></div>
+        <div class="text mb-3 mt-4 text-muted" data-i18n="vpn_modal_title_description"></div>
+        <div class="action">
+          <a href="" class="btn btn-warning btn-confirm px-4" data-i18n="Open_Chat"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+        
+      </div>
+
+      <!-- MODAL -->
+      <div id="copiedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-body" data-i18n="Copied"></div>
+</div>
+      <!-- Modal -->
+<div
+  class="modal fade alert"
+  id="restoreModal"
+  tabindex="-1"
+  aria-labelledby="restoreModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static" 
+  data-bs-keyboard="false"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img src="assets/icons/restore.svg" />
+        <div class="text mt-4" data-i18n="restore_message"></div>
+        <!-- <div class="action"> -->
+          <!-- <button type="button" class="btn btn-warning btn-confirm w-50" data-bs-dismiss="modal" data-i18n="voucher_page.Ok"></button> -->
+          <!-- <a href="./history.html" class="btn btn-warning btn-confirm w-50" data-i18n="voucher_page.Ok"></a> -->
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- MODAL -->
+    </section>
+    
+    <!-- SCRIPT -->
+<!-- JQUERY -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"
+  crossorigin="anonymous"
+></script>
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- Translator -->
+<script src="assets/library/translator.min.js" defer ></script>
+<!-- <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js" defer></script> -->
+<!-- Bootstrap Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/library/slick/slick.min.js"></script>
+
+<!-- CUSTOM -->
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/bundle.js" defer></script>
+
+  </body>
+</html>

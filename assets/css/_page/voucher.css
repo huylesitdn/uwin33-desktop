@@ -1,0 +1,113 @@
+.voucher-page {
+  margin-bottom: 0;
+  min-height: auto;
+  margin-bottom: 150px; }
+  .voucher-page #back_url {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px; }
+  .voucher-page__content__empty {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 150px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3); }
+  .voucher-page__content__container__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: 20px; }
+  .voucher-page__content__container__item {
+    background: #19264B;
+    border: 1px solid #19264B;
+    border-radius: 12px;
+    margin-top: 10px;
+    padding: 15px 25px; }
+    .voucher-page__content__container__item img {
+      width: 30px; }
+    .voucher-page__content__container__item__price {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: #FDBB2C;
+      margin-bottom: 4px; }
+      .voucher-page__content__container__item__price span {
+        font-size: 24px;
+        line-height: 33px; }
+    .voucher-page__content__container__item__title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+      color: #FFFFFF; }
+    .voucher-page__content__container__item__description {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: rgba(255, 255, 255, 0.5); }
+    .voucher-page__content__container__item .btn {
+      background: #FDBB2C;
+      border-radius: 4px;
+      height: 35px;
+      min-width: 100px;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      color: #000000; }
+  .voucher-page__content__form {
+    padding-bottom: 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.13); }
+    .voucher-page__content__form__input .form-label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #FFFFFF;
+      margin-bottom: 10px; }
+    .voucher-page__content__form__input .form-control {
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 4px;
+      min-height: 50px;
+      background: transparent;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: white;
+      padding-left: 13px;
+      padding-right: 13px; }
+      .voucher-page__content__form__input .form-control::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(255, 255, 255, 0.4); }
+      .voucher-page__content__form__input .form-control:focus {
+        box-shadow: none; }
+    .voucher-page__content__form__input .form-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: #FF1A1A; }
+    .voucher-page__content__form .btn {
+      background: #FDBB2C;
+      border-radius: 4px;
+      min-height: 50px;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      color: #000000;
+      width: 100%;
+      margin-top: 25px; }

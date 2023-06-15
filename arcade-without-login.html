@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+  <meta charset="UTF-8" />
+  
+  <!-- build -->
+  <base href = "." />
+
+  <!-- server -->
+  <!-- <base href = "/" /> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#FDBB2C" >
+  <title>UWIN - Arcade</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.jpg">
+  <meta name="msapplication-TileColor" content="#000B26">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000B26">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick-theme.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+  <body>
+    
+    <!-- Content -->
+    <section class="main category-page">
+      <div id="loadingDiv"><div class="loader">Loading...</div></div>
+
+<nav id="myNavbar" class="navbar fixed-top navbar-light">
+  <div class="container content">
+    <div>
+      
+      <a href="./index-without-login.html">
+        <img class="content__logo" src="assets/icons/logo.png" alt="" />
+      </a>
+       
+    </div>
+    <div class="d-flex justify-content-end align-items-center">
+      <button type="button" class="btn btn-language">中</button>
+      
+      
+      <button type="button" class="btn btn-newbie p-0 me-3 pt-1" data-bs-toggle="modal" data-bs-target="#newbieWithoutLoginModal">
+        <img class="h-100" src="assets/images/newbie-icon.png" alt="" />
+      </button>
+      
+       
+      <a href="./login.html" class="btn btn-warning btn-login">
+        <div>
+          <img src="assets/icons/user-black.svg" alt="" />
+          <span data-i18n="Login_Register"></span>
+        </div>
+      </a>
+      
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-animated">
+      <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();">
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+      </marquee>
+    </div>
+  </div>
+</nav>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="pleaseLoginFirstModal"
+  tabindex="-1"
+  aria-labelledby="pleaseLoginFirstModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="title" data-i18n="Please_Login_First_to_Play_Game"></div>
+        <div class="text mb-3 mt-4" data-i18n="Please_Login_First_to_Play_Game_description"></div>
+        <div class="action">
+          <a href="./register.html" class="btn btn-light w-100" data-i18n="Register"></a>
+          <a href="./login.html" class="btn btn-warning btn-confirm w-100" data-i18n="Login"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+
+
+<!-- NEWBIE MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieModal"
+  tabindex="-1"
+  aria-labelledby="newbieModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./deposit.html" class="btn btn-warning" data-i18n="home_page.Deposit_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieWithoutLoginModal"
+  tabindex="-1"
+  aria-labelledby="newbieWithoutLoginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation_without_login"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des_without_login"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./register.html" class="btn btn-warning" data-i18n="home_page.Register_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWBIE MODAL -->
+      <div class="category-page__content container">
+
+        <div class="layout row">
+  <div class="left col-2">
+    <div class="left-menu">
+  <div class="list-group divider">
+    <a
+      href="./index-without-login.html"
+      class="list-group-item list-group-item-action active"
+      aria-current="true"
+    >
+      <div class="img">
+        <img src="assets/icons/footer-home.png" alt="" />
+        <img class="active" src="assets/icons/footer-home-active.png" alt="" />
+      </div>
+      <div class="text" data-i18n="footer.HOME"></div>
+    </a>
+    <a href="./login.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-wallet.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-wallet-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.WALLET"></div>
+    </a>
+    <a href="./promotion-without-login.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-promotion.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-promotion-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.PROMOTION"></div>
+    </a>
+    <a href="./login.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-livechat.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-livechat-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.LIVE_CHAT"></div>
+    </a>
+  </div>
+  <div class="list-group pt-3">
+    <a href="./slot-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/slot.svg" alt="" />
+      <span data-i18n="menu.Slot"></span>
+    </a>
+    <a href="./casino-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/casino.svg" alt="" />
+      <span data-i18n="menu.Casino"></span>
+    </a>
+    <a href="./sport-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/sport.svg" alt="" />
+      <span data-i18n="Sport_E_sport"></span>
+    </a>
+    <a href="./arcade-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/arcade.svg" alt="" />
+      <span data-i18n="menu.Arcade"></span>
+    </a>
+    <a href="./4d-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/4d.svg" alt="" />
+      <span data-i18n="menu.4D"></span>
+    </a>
+    <a href="./voucher-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/voucher.svg" alt="" />
+      <span data-i18n="voucher_page.Redeem_Voucher"></span>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="content col-7">
+    <div class="category-page__content__top" data-aos="fade-in">
+
+  <!-- start slider -->
+  <div class="top-slider pt-0" data-aos="fade-in">
+  <div class="columns">
+    <!-- <img src="assets/images/slider/1.png" alt="" /> -->
+    <img src="assets/images/slider/2.jpeg" alt="" />
+  </div>
+  <div class="columns">
+    <img src="assets/images/slider/2.jpeg" alt="" />
+  </div>
+  <div class="columns">
+    <img src="assets/images/slider/2.jpeg" alt="" />
+  </div>
+</div>
+  <!-- end slider -->
+
+  <div class="nav nav-tabs category-page__content__top__navbar row mx-0" id="category-tab" role="tablist">
+    <a href="./slot.html" class="col category-page__content__top__navbar__item " id="nav-slot-tab" data-bs-toggle="tab" data-bs-target="#nav-slot" role="tab" aria-controls="nav-slot" aria-selected="true">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/slot-blue.png" alt="" />
+        <img class="active" src="assets/images/category/slot-blue-active.png" alt="" />
+        <div class="category-page__content__top__navbar__item__text" data-i18n="menu.Slot"></div>
+      </div>
+    </a>
+    <a href="./casino.html" class="col category-page__content__top__navbar__item " id="nav-casino-tab" data-bs-toggle="tab" data-bs-target="#nav-casino" role="tab" aria-controls="nav-casino" aria-selected="false">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/casino-blue.png" alt="" />
+        <img class="active" src="assets/images/category/casino-blue-active.png" alt="" />
+        <div class="category-page__content__top__navbar__item__text" data-i18n="menu.Casino"></div>
+      </div>
+    </a>
+    <a href="./sport.html" class="col category-page__content__top__navbar__item " id="nav-e-sport-tab" data-bs-toggle="tab" data-bs-target="#nav-e-sport" role="tab" aria-controls="nav-e-sport" aria-selected="false">
+      <div class="category-page__content__top__navbar__item__img py-0">
+        <img src="assets/images/category/sport-blue.png" alt="" />
+        <img class="active" src="assets/images/category/sport-blue-active.png" alt="" />
+        <div class="category-page__content__top__navbar__item__text" data-i18n="menu.E-sport"></div>
+      </div>
+    </a>
+    <a href="./arcade.html" class="col category-page__content__top__navbar__item active" id="nav-arcade-tab" data-bs-toggle="tab" data-bs-target="#nav-arcade" role="tab" aria-controls="nav-arcade" aria-selected="false">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/arcade-blue.png" alt="" />
+        <img class="active" src="assets/images/category/arcade-blue-active.png" alt="" />
+        <div class="category-page__content__top__navbar__item__text" data-i18n="menu.Arcade"></div>
+      </div>
+    </a>
+    <a href="./4d.html" class="col category-page__content__top__navbar__item " id="nav-4d-tab" data-bs-toggle="tab" data-bs-target="#nav-4d" role="tab" aria-controls="nav-4d" aria-selected="false">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/4d-blue.png" alt="" />
+        <img class="active" src="assets/images/category/4d-blue-active.png" alt="" />
+        <div class="category-page__content__top__navbar__item__text" data-i18n="menu.4D"></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- <div class="category-page__content__top__navbar container-fluid">
+    <a href="./slot.html" class="category-page__content__top__navbar__item " data-aos="fade-in">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/slot-blue.png" alt="" />
+        <img class="active" src="assets/images/category/slot-blue-active.png" alt="" />
+      </div>
+      <div class="category-page__content__top__navbar__item__text" data-i18n="menu.Slot"></div>
+    </a>
+    <a href="./casino.html" class="category-page__content__top__navbar__item " data-aos="fade-in">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/casino-blue.png" alt="" />
+        <img class="active" src="assets/images/category/casino-blue-active.png" alt="" />
+      </div>
+      <div class="category-page__content__top__navbar__item__text" data-i18n="menu.Casino"></div>
+    </a>
+    <a href="./sport.html" class="category-page__content__top__navbar__item " data-aos="fade-in">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/sport-blue.png" alt="" />
+        <img class="active" src="assets/images/category/sport-blue-active.png" alt="" />
+      </div>
+      <div class="category-page__content__top__navbar__item__text" data-i18n="menu.Sport_E_sport"></div>
+    </a>
+    <a href="./arcade.html" class="category-page__content__top__navbar__item active" data-aos="fade-in">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/arcade-blue.png" alt="" />
+        <img class="active" src="assets/images/category/arcade-blue-active.png" alt="" />
+      </div>
+      <div class="category-page__content__top__navbar__item__text" data-i18n="menu.Arcade"></div>
+    </a>
+    <a href="./4d.html" class="category-page__content__top__navbar__item " data-aos="fade-in">
+      <div class="category-page__content__top__navbar__item__img">
+        <img src="assets/images/category/4d-blue.png" alt="" />
+        <img class="active" src="assets/images/category/4d-blue-active.png" alt="" />
+      </div>
+      <div class="category-page__content__top__navbar__item__text" data-i18n="menu.4D"></div>
+    </a>
+  </div> -->
+
+</div>
+
+<div data-aos="fade-up">
+  <div class="tab-content">
+    <div class="tab-pane fade " id="nav-slot" role="tabpanel" aria-labelledby="nav-slot-tab">
+      <div class="category-page__content__container">
+
+  <div class="category-page__content__container__hot_games home-section">
+    <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+      <span data-i18n="home_page.Slot" class="label" data-aos="fade-up" data-aos-delay="0"></span>
+      <div data-i18n="home_page.Hot_Games" class="title mb-0" data-aos="fade-up" data-aos-delay="50"></div>
+    </div>
+  
+    <div class="category-page__content__container__hot_games__content row ps-0 pe-0 mx-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="col category-page__content__container__hot_games__content__item show-action">
+        <div class="category-page__content__container__hot_games__content__item__label success" data-i18n="home_page.FREE_TRIAL"></div>
+        <img class="category-page__content__container__hot_games__content__item__img" src="assets/images/hot-games/1.png" alt="" />
+        <div class="category-page__content__container__hot_games__content__item__title" data-i18n="home_page.5_Fortune_Dragon"></div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+          <a href="#" class="btn btn-light btn-play-real" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="col category-page__content__container__hot_games__content__item show-action">
+        <div class="category-page__content__container__hot_games__content__item__label success" data-i18n="home_page.FREE_TRIAL"></div>
+        <img class="category-page__content__container__hot_games__content__item__img" src="assets/images/hot-games/5.png" alt="" />
+        <div class="category-page__content__container__hot_games__content__item__title" data-i18n="home_page.Cai_Shen_888"></div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+          <a href="#" class="btn btn-light btn-play-real" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="col category-page__content__container__hot_games__content__item show-action">
+        <div class="category-page__content__container__hot_games__content__item__label danger" data-i18n="home_page.HOT"></div>
+        <img class="category-page__content__container__hot_games__content__item__img" src="assets/images/hot-games/6.png" alt="" />
+        <div class="category-page__content__container__hot_games__content__item__title" data-i18n="home_page.Golden_Lotus"></div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+          <a href="#" class="btn btn-light btn-play-real" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="col category-page__content__container__hot_games__content__item show-action">
+        <div class="category-page__content__container__hot_games__content__item__label success" data-i18n="home_page.FREE_TRIAL"></div>
+        <img class="category-page__content__container__hot_games__content__item__img" src="assets/images/hot-games/7.png" alt="" />
+        <div class="category-page__content__container__hot_games__content__item__title" data-i18n="home_page.Hot_Spin"></div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+          <a href="#" class="btn btn-light btn-play-real" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="col category-page__content__container__hot_games__content__item show-action">
+        <div class="category-page__content__container__hot_games__content__item__label danger" data-i18n="home_page.HOT"></div>
+        <img class="category-page__content__container__hot_games__content__item__img" src="assets/images/hot-games/8.png" alt="" />
+        <div class="category-page__content__container__hot_games__content__item__title" data-i18n="home_page.Great_Blue"></div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+          <a href="#" class="btn btn-light btn-play-real" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <!-- <div class="col category-page__content__container__hot_games__content__item show-action">
+        <div class="category-page__content__container__hot_games__content__item__label danger" data-i18n="home_page.HOT"></div>
+        <img class="category-page__content__container__hot_games__content__item__img" src="assets/images/hot-games/9.png" alt="" />
+        <div class="category-page__content__container__hot_games__content__item__title" data-i18n="home_page.Great_Blue"></div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+          <a href="#" class="btn btn-light btn-play-real" data-i18n="home_page.Demo"></a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="category-page__content__container__games_lobby home-section ">
+    <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+      <span data-i18n="home_page.Slot" class="label" data-aos="fade-up" data-aos-delay="0"></span>
+      <div data-i18n="Games_Lobby" class="title mb-0" data-aos="fade-up" data-aos-delay="50"></div>
+    </div>
+  
+    <div class="category-page__content__container__games_lobby__content row mx-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a role="button" class="category-page__content__container__games_lobby__content__item__img" data-bs-toggle="modal" data-bs-target="#vpnModal">
+          <img class="vpn position-absolute start-0 pt-2" src="assets/images/vpn.svg" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/9.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/91.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/1.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/11.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/2.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/21.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/3.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/31.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/4.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/41.png" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="category-page__content__container__games_lobby__content row mx-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/5.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/51.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/6.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/61.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/7.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/71.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/8.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/81.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/10.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/101.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/11_1.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/111.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/12.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/121.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/13.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/131.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col"></div>
+      <div class="category-page__content__container__games_lobby__content__item col"></div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="footer-info" data-aos="fade-up">
+  <p class="title" data-i18n="slot_footer_title"></p>
+  <div class="collapse" id="collapseFooterInfo" data-i18n="slot_footer_description"></div>
+  <a class="collapsed" data-bs-toggle="collapse" href="#collapseFooterInfo" role="button" aria-expanded="false" aria-controls="collapseFooterInfo">
+    <div class="show">
+      <div data-i18n="see_more"></div>
+      <img src="assets/icons/down-white.svg" alt="" />
+    </div>
+    <div class="hide">
+      <div data-i18n="see_less"></div>
+      <img src="assets/icons/up-white.svg" alt="" />
+    </div>
+  </a>
+</div>
+
+
+    </div>
+    <div class="tab-pane fade " id="nav-casino" role="tabpanel" aria-labelledby="nav-casino-tab">
+      <div class="category-page__content__container">
+
+  <div class="category-page__content__container__special_odds home-section">
+    <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+      <span data-i18n="home_page.Casino" class="label" data-aos="fade-up" data-aos-delay="0"></span>
+      <div data-i18n="home_page.Special_Odds" class="title mb-0" data-aos="fade-up" data-aos-delay="50"></div>
+    </div>
+  
+    <div class="category-page__content__container__special_odds__content row ps-0 pe-0 mx-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="category-page__content__container__special_odds__content__item col p-0 show-action">
+        <img class="category-page__content__container__special_odds__content__item__img" src="assets/images/special-odds/1.png" alt="" />
+        <div class="category-page__content__container__special_odds__content__item__title" data-i18n="home_page.Lightning_Roulette"></div>
+        <div class="category-page__content__container__special_odds__content__item__label">
+          <span data-i18n="home_page.Special_odds_label"></span>: x500
+        </div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="category-page__content__container__special_odds__content__item col p-0 show-action">
+        <img class="category-page__content__container__special_odds__content__item__img" src="assets/images/special-odds/2.png" alt="" />
+        <div class="category-page__content__container__special_odds__content__item__title" data-i18n="home_page.Lightning_Baccarat"></div>
+        <div class="category-page__content__container__special_odds__content__item__label">
+          <span data-i18n="home_page.Special_odds_label"></span>: x500
+        </div>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="col p-0"></div>
+      <div class="col p-0"></div>
+      <div class="col p-0"></div>
+    </div>
+  </div>
+  
+
+  <div class="category-page__content__container__games_lobby home-section">
+    <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+      <span data-i18n="home_page.Casino" class="label" data-aos="fade-up" data-aos-delay="0"></span>
+      <div data-i18n="Games_Lobby" class="title mb-0" data-aos="fade-up" data-aos-delay="50"></div>
+    </div>
+  
+    <div class="category-page__content__container__games_lobby__content row ps-0 pe-0 mx-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/casino/1.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/casino/11.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/casino/2.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/casino/21.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/casino/3.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/casino/31.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/casino/4.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/casino/41.png" alt="" />
+        </a>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/casino/5.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/casino/51.png" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="category-page__content__container__games_lobby__content row ps-0 pe-0 mx-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="category-page__content__container__games_lobby__content__item col">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/casino/6.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/casino/61.png" alt="" />
+        </a>
+      </div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="footer-info" data-aos="fade-up">
+  <p class="title" data-i18n="casino_footer_title"></p>
+  <div class="collapse" id="collapseFooterInfo" data-i18n="casino_footer_description"></div>
+  <a class="collapsed" data-bs-toggle="collapse" href="#collapseFooterInfo" role="button" aria-expanded="false" aria-controls="collapseFooterInfo">
+    <div class="show">
+      <div data-i18n="see_more"></div>
+      <img src="assets/icons/down-white.svg" alt="" />
+    </div>
+    <div class="hide">
+      <div data-i18n="see_less"></div>
+      <img src="assets/icons/up-white.svg" alt="" />
+    </div>
+  </a>
+</div>
+    </div>
+    <div class="tab-pane fade " id="nav-e-sport" role="tabpanel" aria-labelledby="nav-e-sport-tab">
+      <div class="category-page__content__container">
+
+  <div class="category-page__content__container__games_lobby home-section">
+    <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+      <span data-i18n="Sport_E_sport" class="label" data-aos="fade-up" data-aos-delay="0"></span>
+      <div data-i18n="Games_Lobby" class="title mb-0" data-aos="fade-up" data-aos-delay="50"></div>
+    </div>
+  
+    <div class="category-page__content__container__games_lobby__content row ps-0 pe-0 mx-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="category-page__content__container__games_lobby__content__item col p-0">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/sport/1.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/sport/11.png" alt="" />
+        </a>
+        <!-- <div class="category-page__content__container__games_lobby__content__item__title" data-i18n="Sport"></div> -->
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col p-0">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/sport/2.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/sport/21.png" alt="" />
+        </a>
+        <!-- <div class="category-page__content__container__games_lobby__content__item__title" data-i18n="E-sport"></div> -->
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col p-0">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/sport/3.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo mh-14px" src="assets/images/games-lobby/sport/31.png" alt="" />
+        </a>
+        <!-- <div class="category-page__content__container__games_lobby__content__item__title" data-i18n="Sport"></div> -->
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col p-0">
+        <a class="category-page__content__container__games_lobby__content__item__img" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/sport/4.png" alt="" />
+          <img class="category-page__content__container__games_lobby__content__item__img__logo mh-14px" src="assets/images/games-lobby/sport/41.png" alt="" />
+        </a>
+        <!-- <div class="category-page__content__container__games_lobby__content__item__title" data-i18n="Sport"></div> -->
+      </div>
+      <div class="col p-0"></div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="footer-info" data-aos="fade-up">
+  <p class="title" data-i18n="sport_footer_title"></p>
+  <div class="collapse" id="collapseFooterInfo" data-i18n="sport_footer_description"></div>
+  <a class="collapsed" data-bs-toggle="collapse" href="#collapseFooterInfo" role="button" aria-expanded="false" aria-controls="collapseFooterInfo">
+    <div class="show">
+      <div data-i18n="see_more"></div>
+      <img src="assets/icons/down-white.svg" alt="" />
+    </div>
+    <div class="hide">
+      <div data-i18n="see_less"></div>
+      <img src="assets/icons/up-white.svg" alt="" />
+    </div>
+  </a>
+</div>
+    </div>
+    <div class="tab-pane fade show active" id="nav-arcade" role="tabpanel" aria-labelledby="nav-arcade-tab">
+      <div class="category-page__content__container">
+
+  <div class="category-page__content__container__games_lobby home-section">
+    <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+      <span data-i18n="Arcade" class="label" data-aos="fade-up" data-aos-delay="0"></span>
+      <div data-i18n="Games_Lobby" class="title mb-0" data-aos="fade-up" data-aos-delay="50"></div>
+    </div>
+  
+    <div class="category-page__content__container__games_lobby__content row ps-0 pe-0 mx-0 pt-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="category-page__content__container__games_lobby__content__item col p-0 show-action position-relative">
+        <a class="category-page__content__container__games_lobby__content__item__content" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__content__icon full-icon" src="assets/images/games-lobby/arcade/1.png" alt="" />
+          <div class="category-page__content__container__games_lobby__content__item__content__title text" data-i18n="category_page.Fishing_God"></div>
+        </a>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col p-0 show-action position-relative">
+        <a class="category-page__content__container__games_lobby__content__item__content" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__content__icon full-icon" src="assets/images/games-lobby/arcade/2.png" alt="" />
+          <div class="category-page__content__container__games_lobby__content__item__content__title text" data-i18n="category_page.Tokyo_Kombat"></div>
+        </a>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="category-page__content__container__games_lobby__content__item col p-0 show-action position-relative">
+        <a class="category-page__content__container__games_lobby__content__item__content" href="#">
+          <img class="category-page__content__container__games_lobby__content__item__content__icon full-icon" src="assets/images/games-lobby/arcade/3.png" alt="" />
+          <div class="category-page__content__container__games_lobby__content__item__content__title text" data-i18n="category_page.American_Kombat"></div>
+        </a>
+        <div class="action">
+          <a href="#" class="btn btn-warning btn-demo" data-i18n="home_page.Demo"></a>
+        </div>
+      </div>
+      <div class="col p-0"></div>
+      <div class="col p-0"></div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="footer-info" data-aos="fade-up">
+  <p class="title" data-i18n="arcade_footer_title"></p>
+  <div class="collapse" id="collapseFooterInfo" data-i18n="arcade_footer_description"></div>
+  <a class="collapsed" data-bs-toggle="collapse" href="#collapseFooterInfo" role="button" aria-expanded="false" aria-controls="collapseFooterInfo">
+    <div class="show">
+      <div data-i18n="see_more"></div>
+      <img src="assets/icons/down-white.svg" alt="" />
+    </div>
+    <div class="hide">
+      <div data-i18n="see_less"></div>
+      <img src="assets/icons/up-white.svg" alt="" />
+    </div>
+  </a>
+</div>
+    </div>
+    <div class="tab-pane fade " id="nav-4d" role="tabpanel" aria-labelledby="nav-4d-tab">
+      <div class="category-page__content__container">
+
+          
+  <div class="category-page__content__container__lucky_number" data-aos="fade-up" data-aos-delay="0">
+    <div class="category-page__content__container__lucky_number__title" data-i18n="Lucky_Number_of_the_Day"></div>
+    <div class="category-page__content__container__lucky_number__number">
+      <span id="lucky-number">9 9 8 8</span>
+      <img class="refresh-lucky-number cursor-pointer" src="assets/icons/refresh.svg" alt="" />
+    </div>
+    <div class="category-page__content__container__lucky_number__bet_now">
+      <a href="#" class="btn btn-warning btn-bet-now" data-i18n="Bet_Now"></a>
+    </div>
+    <div class="category-page__content__container__lucky_number__payout">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#payoutTableModal" class="btn btn-link" data-i18n="Payout_Table"></a>
+    </div>
+  </div>
+
+
+  <div class="category-page__content__container__tab">
+    <div class="category-page__content__container__tab__nav" data-aos="fade-up" data-aos-delay="50">
+      <ul class="nav nav-tabs justify-content-around" id="4DTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab4d1-tab" data-bs-toggle="tab" data-bs-target="#tab4d1" type="button" role="tab" aria-controls="tab4d1" aria-selected="true">
+            <img src="assets/images/4d/1.png" alt="" />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab4d2-tab" data-bs-toggle="tab" data-bs-target="#tab4d2" type="button" role="tab" aria-controls="tab4d2" aria-selected="false">
+            <img src="assets/images/4d/2.png" alt="" />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab4d3-tab" data-bs-toggle="tab" data-bs-target="#tab4d3" type="button" role="tab" aria-controls="tab4d3" aria-selected="false">
+            <img src="assets/images/4d/3.png" alt="" />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab4d4-tab" data-bs-toggle="tab" data-bs-target="#tab4d4" type="button" role="tab" aria-controls="tab4d4" aria-selected="false">
+            <img src="assets/images/4d/4.png" alt="" />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab4d5-tab" data-bs-toggle="tab" data-bs-target="#tab4d5" type="button" role="tab" aria-controls="tab4d5" aria-selected="false">
+            <img src="assets/images/4d/5.png" alt="" />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab4d6-tab" data-bs-toggle="tab" data-bs-target="#tab4d6" type="button" role="tab" aria-controls="tab4d6" aria-selected="false">
+            <img src="assets/images/4d/6.png" alt="" />
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab4d7-tab" data-bs-toggle="tab" data-bs-target="#tab4d7" type="button" role="tab" aria-controls="tab4d7" aria-selected="false">
+            <img src="assets/images/4d/7.png" alt="" />
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-content" id="tab4DTabContent" data-aos="fade-up" data-aos-delay="100">
+      <div class="tab-pane fade show active" id="tab4d1" role="tabpanel" aria-labelledby="tab4d1-tab">
+        <div class="tab4d-container">
+  <div class="tab4d-container__title">
+    <div>
+      <img src="assets/images/4d/1.png" alt="" />
+    </div>
+    <div>
+      <div class="" data-i18n="Magnum"></div>
+      <div class="date">19/05/2022 (SUN)</div>
+    </div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="1st_Prize"></div>
+    <div>9999</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="2nd_Prize"></div>
+    <div>8888</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="3rd_Prize"></div>
+    <div>8887</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Special"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Consolation"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+</div>
+      </div>
+      <div class="tab-pane fade" id="tab4d2" role="tabpanel" aria-labelledby="tab4d2-tab">
+        <!-- tab4d2 -->
+        <div class="tab4d-container">
+  <div class="tab4d-container__title">
+    <div>
+      <img src="assets/images/4d/1.png" alt="" />
+    </div>
+    <div>
+      <div class="" data-i18n="Magnum"></div>
+      <div class="date">19/05/2022 (SUN)</div>
+    </div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="1st_Prize"></div>
+    <div>9999</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="2nd_Prize"></div>
+    <div>8888</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="3rd_Prize"></div>
+    <div>8887</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Special"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Consolation"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+</div>
+      </div>
+      <div class="tab-pane fade" id="tab4d3" role="tabpanel" aria-labelledby="tab4d3-tab">
+        <!-- tab4d3 -->
+        <div class="tab4d-container">
+  <div class="tab4d-container__title">
+    <div>
+      <img src="assets/images/4d/1.png" alt="" />
+    </div>
+    <div>
+      <div class="" data-i18n="Magnum"></div>
+      <div class="date">19/05/2022 (SUN)</div>
+    </div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="1st_Prize"></div>
+    <div>9999</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="2nd_Prize"></div>
+    <div>8888</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="3rd_Prize"></div>
+    <div>8887</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Special"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Consolation"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+</div>
+      </div>
+      <div class="tab-pane fade" id="tab4d4" role="tabpanel" aria-labelledby="tab4d4-tab">
+        <!-- tab4d4 -->
+        <div class="tab4d-container">
+  <div class="tab4d-container__title">
+    <div>
+      <img src="assets/images/4d/1.png" alt="" />
+    </div>
+    <div>
+      <div class="" data-i18n="Magnum"></div>
+      <div class="date">19/05/2022 (SUN)</div>
+    </div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="1st_Prize"></div>
+    <div>9999</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="2nd_Prize"></div>
+    <div>8888</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="3rd_Prize"></div>
+    <div>8887</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Special"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Consolation"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+</div>
+      </div>
+      <div class="tab-pane fade" id="tab4d5" role="tabpanel" aria-labelledby="tab4d5-tab">
+        <!-- tab4d5 -->
+        <div class="tab4d-container">
+  <div class="tab4d-container__title">
+    <div>
+      <img src="assets/images/4d/1.png" alt="" />
+    </div>
+    <div>
+      <div class="" data-i18n="Magnum"></div>
+      <div class="date">19/05/2022 (SUN)</div>
+    </div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="1st_Prize"></div>
+    <div>9999</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="2nd_Prize"></div>
+    <div>8888</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="3rd_Prize"></div>
+    <div>8887</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Special"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Consolation"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+</div>
+      </div>
+      <div class="tab-pane fade" id="tab4d6" role="tabpanel" aria-labelledby="tab4d6-tab">
+        <!-- tab4d6 -->
+        <div class="tab4d-container">
+  <div class="tab4d-container__title">
+    <div>
+      <img src="assets/images/4d/1.png" alt="" />
+    </div>
+    <div>
+      <div class="" data-i18n="Magnum"></div>
+      <div class="date">19/05/2022 (SUN)</div>
+    </div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="1st_Prize"></div>
+    <div>9999</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="2nd_Prize"></div>
+    <div>8888</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="3rd_Prize"></div>
+    <div>8887</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Special"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Consolation"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+</div>
+      </div>
+      <div class="tab-pane fade" id="tab4d7" role="tabpanel" aria-labelledby="tab4d7-tab">
+        <!-- tab4d7 -->
+        <div class="tab4d-container">
+  <div class="tab4d-container__title">
+    <div>
+      <img src="assets/images/4d/1.png" alt="" />
+    </div>
+    <div>
+      <div class="" data-i18n="Magnum"></div>
+      <div class="date">19/05/2022 (SUN)</div>
+    </div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="1st_Prize"></div>
+    <div>9999</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="2nd_Prize"></div>
+    <div>8888</div>
+  </div>
+  <div class="tab4d-container__content">
+    <div class="text-warning" data-i18n="3rd_Prize"></div>
+    <div>8887</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Special"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+  <div class="tab4d-container__subtitle" data-i18n="Consolation"></div>
+  <div class="tab4d-container__contenttext row">
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3">4040</div>
+    <div class="col-3 offset-3">4040</div>
+    <div class="col-3">4040</div>
+  </div>
+
+</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer-info" data-aos="fade-up">
+  <p class="title" data-i18n="4d_footer_title"></p>
+  <div class="collapse" id="collapseFooterInfo" data-i18n="4d_footer_description"></div>
+  <a class="collapsed" data-bs-toggle="collapse" href="#collapseFooterInfo" role="button" aria-expanded="false" aria-controls="collapseFooterInfo">
+    <div class="show">
+      <div data-i18n="see_more"></div>
+      <img src="assets/icons/down-white.svg" alt="" />
+    </div>
+    <div class="hide">
+      <div data-i18n="see_less"></div>
+      <img src="assets/icons/up-white.svg" alt="" />
+    </div>
+  </a>
+</div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="right col-3">
+    
+      <section class="home">
+  <div class="home__content">
+    <div
+      class="home__content__exclusive_event home-section pt-0"
+      data-aos="fade-up" data-aos-delay="500"
+    >
+      <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+        <span data-i18n="home_page.Hot" class="label"></span>
+        <div data-i18n="home_page.Exclusive_Event" class="title mb-0"></div>
+      </div>
+      <div class="home__content__exclusive_event__content">
+        <div class="home__content__exclusive_event__content__header">
+          <div
+            class="home__content__exclusive_event__content__header__title"
+            data-i18n="home_page.Millions_Subsidy"
+          ></div>
+          <span
+            class="home__content__exclusive_event__content__header__total-prize"
+          >
+            <span data-i18n="home_page.Total_prize"></span>: SGD 345,000
+          </span>
+          <img
+            class="home__content__exclusive_event__content__header__icon"
+            src="assets/images/exclusive-event-icon.png"
+            alt=""
+          />
+        </div>
+        <div class="home__content__exclusive_event__content__item pt-4">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item pb-4">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__action">
+          <a
+            href="./exclusive-event-without-login.html"
+            class="btn btn-warning"
+            data-i18n="home_page.Learn_More"
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home__content__luck_surprise" data-aos="fade-up" data-aos-delay="1000">
+      <div class="home__content__luck_surprise__title">
+        <div
+          class="home__content__luck_surprise__title__left"
+          data-i18n="home_page.LUCK"
+        ></div>
+        <img
+          class="home__content__luck_surprise__title__icon"
+          src="assets/images/luck-surprise-icon.png"
+          alt=""
+        />
+        <div
+          class="home__content__luck_surprise__title__right"
+          data-i18n="home_page.SURPRISE"
+        ></div>
+      </div>
+      <div
+        class="home__content__luck_surprise__subtitle"
+        data-i18n="home_page.Uwin33_Mascot"
+      ></div>
+    </div>
+
+    <div class="home__content__gaming_licenses home-section" data-aos="fade-up" data-aos-delay="1500">
+      <div data-i18n="home_page.Gaming_Licenses" class="title"></div>
+      <div class="home__content__gaming_licenses__content">
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/1.png"
+          alt=""
+        />
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/2.png"
+          alt=""
+        />
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/3.png"
+          alt=""
+        />
+        <!-- <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/1.png" alt="" />
+        </div>
+        <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/2.png" alt="" />
+        </div>
+        <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/3.png" alt="" />
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  </div>
+</div>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="vpnModal"
+  tabindex="-1"
+  aria-labelledby="vpnModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="mx-auto my-3" src="assets/images/vpn-icon.svg" alt="" />
+        <div class="title text-white" data-i18n="vpn_modal_title"></div>
+        <div class="text mb-3 mt-4 text-muted" data-i18n="vpn_modal_title_description"></div>
+        <div class="action">
+          <a href="" class="btn btn-warning btn-confirm px-4" data-i18n="Open_Chat"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+        
+        
+      </div>
+
+      <!-- MODAL -->
+      <!-- MODAL -->
+
+      
+      <div class="footer">
+  <div class="container">
+    <img class="footer__logo mb-5" src="assets/icons/logo.png" alt="" />
+    <!-- <div class="footer__copy_right" data-i18n="footer_section.copy_right"></div> -->
+
+    <div class="row">
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Have_any_question"
+          ></div>
+          <div class="footer__items__item question">
+            <a href="#">
+              <img src="assets/images/question/1.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/question/2.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Security_Trust"
+          ></div>
+          <div class="footer__items__item gap-3 security-trust">
+            <a href="#">
+              <img src="assets/images/security-trust/1.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/security-trust/2.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Social_Media"
+          ></div>
+          <div class="footer__items__item social">
+            <a href="#">
+              <img src="assets/images/social/1.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/social/2.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/social/3.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/social/4.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Responsible_Gaming"
+          ></div>
+          <div class="footer__items__item gap-3 responsible-gaming">
+            <a href="#">
+              <img src="assets/images/responsible-gaming/1.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/responsible-gaming/2.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/responsible-gaming/3.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Certification"
+          ></div>
+          <div class="footer__items__item certification">
+            <a href="#">
+              <img src="assets/images/certification/1.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar nav-footer navbar-expand-lg">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.Responsible_Gaming"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.About_Us">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.About_Us">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.TermsConditions">Pricing</a>
+          </li>
+        </ul>
+        <span class="fs-12 text-muted" data-i18n="footer_section.copy_right"></span>
+      </div>
+    </nav>
+
+    <!-- <div class="d-flex gap-5">
+      <div class="footer__items">
+        <div class="footer__items__title" data-i18n="footer_section.Security_Trust"></div>
+        <div class="footer__items__item gap-3 security-trust">
+          <a href="#">
+            <img src="assets/images/security-trust/1.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="assets/images/security-trust/2.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="footer__items">
+      <div class="footer__items__title" data-i18n="footer_section.Certification"></div>
+      <div class="footer__items__item certification">
+        <a href="#">
+          <img src="assets/images/certification/1.png" alt="" />
+        </a>
+      </div>
+    </div> -->
+
+    <!-- <div class="footer__items">
+      <div class="footer__items__title" data-i18n="footer_section.Payment_Method"></div>
+      <div class="footer__items__item payment-method">
+        <a href="#">
+          <img src="assets/images/payment-method.png" alt="" />
+        </a>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+    </section>
+    
+    <!-- SCRIPT -->
+<!-- JQUERY -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"
+  crossorigin="anonymous"
+></script>
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- Translator -->
+<script src="assets/library/translator.min.js" defer ></script>
+<!-- <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js" defer></script> -->
+<!-- Bootstrap Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/library/slick/slick.min.js"></script>
+
+<!-- CUSTOM -->
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/bundle.js" defer></script>
+
+  </body>
+</html>

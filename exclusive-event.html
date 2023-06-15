@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+  <meta charset="UTF-8" />
+  
+  <!-- build -->
+  <base href = "." />
+
+  <!-- server -->
+  <!-- <base href = "/" /> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#FDBB2C" >
+  <title>UWIN - Exclusive Event</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.jpg">
+  <meta name="msapplication-TileColor" content="#000B26">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000B26">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick-theme.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+  <body>
+    
+    <!-- Content -->
+    <section class="main exclusive-event-page">
+      <div id="loadingDiv"><div class="loader">Loading...</div></div>
+
+<nav id="myNavbar" class="navbar fixed-top navbar-light">
+  <div class="container content">
+    <div>
+       
+      <a href="./">
+        <img class="content__logo" src="assets/icons/logo.png" alt="" />
+      </a>
+      
+    </div>
+    <div class="d-flex justify-content-end align-items-center">
+      <button type="button" class="btn btn-language">中</button>
+      
+      <button type="button" class="btn btn-newbie p-0 me-3 pt-1" data-bs-toggle="modal" data-bs-target="#newbieModal">
+        <img class="h-100" src="assets/images/newbie-icon.png" alt="" />
+      </button>
+      
+      
+      
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Basic mixed styles example"
+      >
+        <a href="./deposit.html" class="btn btn-secondary btn-currency">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-wallet.svg"
+            alt=""
+          />
+          <span>SGD 5,000,000</span>
+        </a>
+        <a href="./deposit.html" class="btn btn-warning btn-add">
+          <img
+            class="content__logo"
+            src="assets/icons/navbar-plus.svg"
+            alt=""
+          />
+        </a>
+      </div>
+       
+      
+      <li class="nav-item dropdown list-unstyled avatar-dropdown">
+        <a
+          class="nav-link pe-0"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img class="content__logo" src="assets/icons/avatar.svg" alt="" />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <li>
+            <a class="dropdown-item divider" href="./my-account.html">
+              <div class="d-flex">
+                <img class="close-nav" src="assets/icons/avatar.svg" alt="" />
+                <div class="ps-2">
+                  <div class="fs-16px" data-i18n="menu.Welcome"></div>
+                  <span class="text-primary fs-12px" data-i18n="menu.View_my_account"></span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <img src="assets/icons/infomation.svg" alt="" />
+              <span data-i18n="menu.Information"></span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item country-name" data-bs-toggle="collapse" href="#collapseCountry" role="button" aria-expanded="false" aria-controls="collapseCountry">
+              <img src="assets/icons/country.svg" alt="" />
+              <div class="d-flex justify-content-between w-inherit">
+                <div>
+                  <div data-i18n="menu.Country"></div>
+                  <div class="fs-12px text-muted current-country" data-i18n="menu.Uwin33_Singapore"></div>
+                </div>
+                <img class="pull-right" src="assets/icons/down-white.svg" alt="" />
+              </div>
+            </a>
+            <div class="collapse" id="collapseCountry">
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Singapore" role="button">
+                <img src="assets/images/Uwin33_Singapore.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Singapore"></span>
+              </a>
+              <a href="#" class="dropdown-item collapse__item ps-5" data-region="Malaysia" role="button">
+                <img src="assets/images/Uwin33_Malaysia.svg" alt="" />
+                <span data-i18n="menu.Uwin33_Malaysia"></span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="./login.html">
+              <div class="btn btn-warning w-100 d-flex align-items-center justify-content-center" data-i18n="menu.Logout"></div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-animated">
+      <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();">
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+      </marquee>
+    </div>
+  </div>
+</nav>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="pleaseLoginFirstModal"
+  tabindex="-1"
+  aria-labelledby="pleaseLoginFirstModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="title" data-i18n="Please_Login_First_to_Play_Game"></div>
+        <div class="text mb-3 mt-4" data-i18n="Please_Login_First_to_Play_Game_description"></div>
+        <div class="action">
+          <a href="./register.html" class="btn btn-light w-100" data-i18n="Register"></a>
+          <a href="./login.html" class="btn btn-warning btn-confirm w-100" data-i18n="Login"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+
+
+<!-- NEWBIE MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieModal"
+  tabindex="-1"
+  aria-labelledby="newbieModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./deposit.html" class="btn btn-warning" data-i18n="home_page.Deposit_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieWithoutLoginModal"
+  tabindex="-1"
+  aria-labelledby="newbieWithoutLoginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation_without_login"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des_without_login"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./register.html" class="btn btn-warning" data-i18n="home_page.Register_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWBIE MODAL -->
+      <div class="container">
+        <div class="layout row">
+  <div class="left col-2">
+    <div class="left-menu">
+  <div class="list-group divider">
+    <a
+      href="./index.html"
+      class="list-group-item list-group-item-action active"
+      aria-current="true"
+    >
+      <div class="img">
+        <img src="assets/icons/footer-home.png" alt="" />
+        <img class="active" src="assets/icons/footer-home-active.png" alt="" />
+      </div>
+      <div class="text" data-i18n="footer.HOME"></div>
+    </a>
+    <a href="./deposit.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-wallet.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-wallet-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.WALLET"></div>
+    </a>
+    <a href="./promotion.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-promotion.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-promotion-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.PROMOTION"></div>
+    </a>
+    <a href="./live-chat.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-livechat.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-livechat-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.LIVE_CHAT"></div>
+    </a>
+  </div>
+  <div class="list-group pt-3">
+    <a href="./slot.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/slot.svg" alt="" />
+      <span data-i18n="menu.Slot"></span>
+    </a>
+    <a href="./casino.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/casino.svg" alt="" />
+      <span data-i18n="menu.Casino"></span>
+    </a>
+    <a href="./sport.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/sport.svg" alt="" />
+      <span data-i18n="Sport_E_sport"></span>
+    </a>
+    <a href="./arcade.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/arcade.svg" alt="" />
+      <span data-i18n="menu.Arcade"></span>
+    </a>
+    <a href="./4d.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/4d.svg" alt="" />
+      <span data-i18n="menu.4D"></span>
+    </a>
+    <a href="./voucher.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/voucher.svg" alt="" />
+      <span data-i18n="voucher_page.Redeem_Voucher"></span>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="content col-7">
+    <div class="exclusive-event-page__top" data-aos="fade-in">
+  <img class="exclusive-event-page__top__title mb-2" src="assets/images/exclusive-event/title.png" alt="" />
+  <div class="exclusive-event-page__top__prize mb-2">
+    <div class="exclusive-event-page__top__prize__text" data-i18n="exclusive_event_page.Prize_pool_reset_on_1st_of_month"></div>
+    <img class="exclusive-event-page__top__prize__img" src="assets/images/exclusive-event/prize.png" alt="" />
+  </div>
+  <img class="exclusive-event-page__top__logo mb-2" src="assets/images/exclusive-event/logo.svg" alt="" />
+  <div class="exclusive-event-page__top__action">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#exclusiveEventTCModal" class="btn btn-light" data-i18n="exclusive_event_page.T_C"></a>
+    <a href="./play-now.html" class="btn btn-warning" data-i18n="exclusive_event_page.Play_Now"></a>
+  </div>
+</div>
+
+<div class="exclusive-event-page__content mt-6" data-aos="fade-up">
+
+  <div class="exclusive-event-page__content__winner_list" data-aos="fade-up">
+    <div class="exclusive-event-page__content__winner_list__header">
+      <div class="exclusive-event-page__content__winner_list__header__title" data-i18n="exclusive_event_page.Winner_List"></div>
+      <div class="exclusive-event-page__content__winner_list__header__last_update">
+        <div data-i18n="exclusive_event_page.Last_update_on"></div>
+        <div>19/05/2022, 13:00:00</div>
+      </div>
+      <img class="exclusive-event-page__content__winner_list__header__icon" src="assets/images/exclusive-event-icon.png" alt="" />
+    </div>
+    <div class="exclusive-event-page__content__winner_list__container hide-scrollbar">
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__container__item">
+        <div class="d-flex align-items-center gap-2">
+          <img src="assets/icons/user-blue.svg" alt="" />
+          <div class="">
+            <div class="username">**ng89</div>
+            <div class="name">Cai Shen 888</div>
+          </div>
+        </div>
+        <div>
+          <div class="price">SGD 932</div>
+          <div class="date">14/5/2022</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="exclusive-event-page__content__winner_list mt-5" data-aos="fade-up">
+    <div class="exclusive-event-page__content__winner_list__header">
+      <div class="exclusive-event-page__content__winner_list__header__title how-to-win mb-5" data-i18n="exclusive_event_page.How_To_Win"></div>
+      <div class="exclusive-event-page__content__winner_list__header__description my-2 text-center" data-i18n="exclusive_event_page.How_To_Win_description"></div>
+      <div class="exclusive-event-page__content__winner_list__header__description text-center" data-i18n="exclusive_event_page.How_To_Win_description1"></div>
+      <img class="exclusive-event-page__content__winner_list__header__icon" src="assets/images/exclusive-event/how-to-win.png" alt="" />
+    </div>
+    <div class="exclusive-event-page__content__winner_list__games pt-1">
+      <div class="exclusive-event-page__content__winner_list__games__title">
+        <span data-i18n="exclusive_event_page.Games"></span>
+        <a href="#" data-i18n="exclusive_event_page.See_More"></a>
+      </div>
+      <div class="exclusive-event-page__content__winner_list__games__container row mx-0">
+        <!-- <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/1.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game1"></div>
+        </div>
+        <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/2.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game2"></div>
+        </div>
+        <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/3.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game3"></div>
+        </div>
+        <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/4.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game4"></div>
+        </div>
+        <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/5.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game5"></div>
+        </div>
+        <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/6.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game6"></div>
+        </div>
+        <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/7.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game7"></div>
+        </div>
+        <div class="exclusive-event-page__content__winner_list__games__container__item col p-0">
+          <img src="assets/images/exclusive-event/games/8.png" alt="" />
+          <div data-i18n="exclusive_event_page.Game8"></div>
+        </div> -->
+
+        <div class="category-page__content__container__games_lobby__content row mx-0 px-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="category-page__content__container__games_lobby__content__item col mw-auto">
+            <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+              <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/1.png" alt="" />
+              <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/11.png" alt="" />
+            </a>
+          </div>
+          <div class="category-page__content__container__games_lobby__content__item col mw-auto">
+            <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+              <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/2.png" alt="" />
+              <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/21.png" alt="" />
+            </a>
+          </div>
+          <div class="category-page__content__container__games_lobby__content__item col mw-auto">
+            <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+              <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/3.png" alt="" />
+              <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/31.png" alt="" />
+            </a>
+          </div>
+          <div class="category-page__content__container__games_lobby__content__item col mw-auto">
+            <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+              <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/4.png" alt="" />
+              <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/41.png" alt="" />
+            </a>
+          </div>
+          <div class="category-page__content__container__games_lobby__content__item col mw-auto">
+            <a class="category-page__content__container__games_lobby__content__item__img" href="./play-now.html">
+              <img class="category-page__content__container__games_lobby__content__item__img__icon" src="assets/images/games-lobby/slot/5.png" alt="" />
+              <img class="category-page__content__container__games_lobby__content__item__img__logo" src="assets/images/games-lobby/slot/51.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exclusive-event-page__content__play-now pt-4" data-aos="fade-up">
+    <a href="./play-now.html" class="btn btn-warning" data-i18n="exclusive_event_page.Play_Now"></a>
+  </div>
+
+  
+</div>
+  </div>
+  <div class="right col-3">
+    
+      <section class="home">
+  <div class="home__content">
+    <div
+      class="home__content__exclusive_event home-section pt-0"
+      data-aos="fade-up" data-aos-delay="500"
+    >
+      <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+        <span data-i18n="home_page.Hot" class="label"></span>
+        <div data-i18n="home_page.Exclusive_Event" class="title mb-0"></div>
+      </div>
+      <div class="home__content__exclusive_event__content">
+        <div class="home__content__exclusive_event__content__header">
+          <div
+            class="home__content__exclusive_event__content__header__title"
+            data-i18n="home_page.Millions_Subsidy"
+          ></div>
+          <span
+            class="home__content__exclusive_event__content__header__total-prize"
+          >
+            <span data-i18n="home_page.Total_prize"></span>: SGD 345,000
+          </span>
+          <img
+            class="home__content__exclusive_event__content__header__icon"
+            src="assets/images/exclusive-event-icon.png"
+            alt=""
+          />
+        </div>
+        <div class="home__content__exclusive_event__content__item pt-4">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item pb-4">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__action">
+          <a
+            href="./exclusive-event.html"
+            class="btn btn-warning"
+            data-i18n="home_page.Learn_More"
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home__content__luck_surprise" data-aos="fade-up" data-aos-delay="1000">
+      <div class="home__content__luck_surprise__title">
+        <div
+          class="home__content__luck_surprise__title__left"
+          data-i18n="home_page.LUCK"
+        ></div>
+        <img
+          class="home__content__luck_surprise__title__icon"
+          src="assets/images/luck-surprise-icon.png"
+          alt=""
+        />
+        <div
+          class="home__content__luck_surprise__title__right"
+          data-i18n="home_page.SURPRISE"
+        ></div>
+      </div>
+      <div
+        class="home__content__luck_surprise__subtitle"
+        data-i18n="home_page.Uwin33_Mascot"
+      ></div>
+    </div>
+
+    <div class="home__content__gaming_licenses home-section" data-aos="fade-up" data-aos-delay="1500">
+      <div data-i18n="home_page.Gaming_Licenses" class="title"></div>
+      <div class="home__content__gaming_licenses__content">
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/1.png"
+          alt=""
+        />
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/2.png"
+          alt=""
+        />
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/3.png"
+          alt=""
+        />
+        <!-- <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/1.png" alt="" />
+        </div>
+        <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/2.png" alt="" />
+        </div>
+        <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/3.png" alt="" />
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  </div>
+</div>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="vpnModal"
+  tabindex="-1"
+  aria-labelledby="vpnModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="mx-auto my-3" src="assets/images/vpn-icon.svg" alt="" />
+        <div class="title text-white" data-i18n="vpn_modal_title"></div>
+        <div class="text mb-3 mt-4 text-muted" data-i18n="vpn_modal_title_description"></div>
+        <div class="action">
+          <a href="" class="btn btn-warning btn-confirm px-4" data-i18n="Open_Chat"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+      </div>
+
+      <!-- MODAL -->
+      
+<!-- Modal -->
+<div class="modal fade" id="exclusiveEventTCModal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="exclusiveEventTCModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end px-4">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="content">
+        <div class="content__title pt-0" data-i18n="exclusive_event_page.tc_popup.title1"></div>
+
+        <p class="content__description" data-i18n="exclusive_event_page.tc_popup.description1"></p>
+        <ul class="content__subdescription ps-4">
+          <li data-i18n="exclusive_event_page.tc_popup.description11"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description12"></li>
+        </ul>
+
+        <p class="content__description" data-i18n="exclusive_event_page.tc_popup.description2"></p>
+        <ul class="content__subdescription ps-4">
+          <li data-i18n="exclusive_event_page.tc_popup.description21"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description22"></li>
+        </ul>
+
+        <p class="content__description" data-i18n="exclusive_event_page.tc_popup.description3"></p>
+        <ul class="content__subdescription ps-4">
+          <li data-i18n="exclusive_event_page.tc_popup.description31"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description32"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description33"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description34"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description35"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description36"></li>
+          <li data-i18n="exclusive_event_page.tc_popup.description37"></li>
+          <li>
+            <span data-i18n="exclusive_event_page.tc_popup.description38"></span>
+            <div data-i18n="exclusive_event_page.tc_popup.description39" class="text-light my-2"></div>
+          </li>
+          <li>
+            <span data-i18n="exclusive_event_page.tc_popup.description310"></span>
+            <ul class="text-light my-2">
+              <li data-i18n="exclusive_event_page.tc_popup.description311"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description312"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description313"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description314"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description315"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description316"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description317"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description318"></li>
+              <li data-i18n="exclusive_event_page.tc_popup.description319"></li>
+            </ul>
+          </li>
+          <li data-i18n="exclusive_event_page.tc_popup.description320"></li>
+        </ul>
+
+        <p class="content__description" data-i18n="exclusive_event_page.tc_popup.description4"></p>
+
+        <p class="content__description" data-i18n="exclusive_event_page.tc_popup.description5"></p>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- MODAL -->
+      
+    </section>
+    
+    <!-- SCRIPT -->
+<!-- JQUERY -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"
+  crossorigin="anonymous"
+></script>
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- Translator -->
+<script src="assets/library/translator.min.js" defer ></script>
+<!-- <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js" defer></script> -->
+<!-- Bootstrap Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/library/slick/slick.min.js"></script>
+
+<!-- CUSTOM -->
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/bundle.js" defer></script>
+
+  </body>
+</html>

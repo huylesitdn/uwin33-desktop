@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+  <meta charset="UTF-8" />
+  
+  <!-- build -->
+  <base href = "." />
+
+  <!-- server -->
+  <!-- <base href = "/" /> -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#FDBB2C" >
+  <title>UWIN - Promotion</title>
+  <link rel="icon" type="image/png" href="assets/icons/favicon.jpg">
+  <meta name="msapplication-TileColor" content="#000B26">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000B26">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/library/slick/slick-theme.css" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+  <body>
+    
+    <!-- Content -->
+    <section class="main promotion">
+      <div id="loadingDiv"><div class="loader">Loading...</div></div>
+
+<nav id="myNavbar" class="navbar fixed-top navbar-light">
+  <div class="container content">
+    <div>
+      
+      <a href="./index-without-login.html">
+        <img class="content__logo" src="assets/icons/logo.png" alt="" />
+      </a>
+       
+    </div>
+    <div class="d-flex justify-content-end align-items-center">
+      <button type="button" class="btn btn-language">中</button>
+      
+      
+      <button type="button" class="btn btn-newbie p-0 me-3 pt-1" data-bs-toggle="modal" data-bs-target="#newbieWithoutLoginModal">
+        <img class="h-100" src="assets/images/newbie-icon.png" alt="" />
+      </button>
+      
+       
+      <a href="./login.html" class="btn btn-warning btn-login">
+        <div>
+          <img src="assets/icons/user-black.svg" alt="" />
+          <span data-i18n="Login_Register"></span>
+        </div>
+      </a>
+      
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-animated">
+      <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();">
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+        <span class="text-overflow" data-i18n="notification_run"></span>
+      </marquee>
+    </div>
+  </div>
+</nav>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="pleaseLoginFirstModal"
+  tabindex="-1"
+  aria-labelledby="pleaseLoginFirstModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="title" data-i18n="Please_Login_First_to_Play_Game"></div>
+        <div class="text mb-3 mt-4" data-i18n="Please_Login_First_to_Play_Game_description"></div>
+        <div class="action">
+          <a href="./register.html" class="btn btn-light w-100" data-i18n="Register"></a>
+          <a href="./login.html" class="btn btn-warning btn-confirm w-100" data-i18n="Login"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+
+
+<!-- NEWBIE MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieModal"
+  tabindex="-1"
+  aria-labelledby="newbieModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./deposit.html" class="btn btn-warning" data-i18n="home_page.Deposit_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="newbieWithoutLoginModal"
+  tabindex="-1"
+  aria-labelledby="newbieWithoutLoginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/images/newbie.png" alt="" />
+        <div class="title" data-i18n="home_page.Congratulation_without_login"></div>
+        <div class="subtitle" data-i18n="home_page.Congratulation_des_without_login"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="./register.html" class="btn btn-warning" data-i18n="home_page.Register_Claim"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWBIE MODAL -->
+      <div class="promotion__content container">
+
+        <div class="layout row">
+  <div class="left col-2">
+    <div class="left-menu">
+  <div class="list-group divider">
+    <a
+      href="./index-without-login.html"
+      class="list-group-item list-group-item-action "
+      aria-current="true"
+    >
+      <div class="img">
+        <img src="assets/icons/footer-home.png" alt="" />
+        <img class="active" src="assets/icons/footer-home-active.png" alt="" />
+      </div>
+      <div class="text" data-i18n="footer.HOME"></div>
+    </a>
+    <a href="./login.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-wallet.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-wallet-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.WALLET"></div>
+    </a>
+    <a href="./promotion-without-login.html" class="list-group-item list-group-item-action active">
+      <div class="img">
+        <img src="assets/icons/footer-promotion.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-promotion-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.PROMOTION"></div>
+    </a>
+    <a href="./login.html" class="list-group-item list-group-item-action ">
+      <div class="img">
+        <img src="assets/icons/footer-livechat.png" alt="" />
+        <img
+          class="active"
+          src="assets/icons/footer-livechat-active.png"
+          alt=""
+        />
+      </div>
+      <div class="text" data-i18n="footer.LIVE_CHAT"></div>
+    </a>
+  </div>
+  <div class="list-group pt-3">
+    <a href="./slot-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/slot.svg" alt="" />
+      <span data-i18n="menu.Slot"></span>
+    </a>
+    <a href="./casino-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/casino.svg" alt="" />
+      <span data-i18n="menu.Casino"></span>
+    </a>
+    <a href="./sport-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/sport.svg" alt="" />
+      <span data-i18n="Sport_E_sport"></span>
+    </a>
+    <a href="./arcade-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/arcade.svg" alt="" />
+      <span data-i18n="menu.Arcade"></span>
+    </a>
+    <a href="./4d-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/4d.svg" alt="" />
+      <span data-i18n="menu.4D"></span>
+    </a>
+    <a href="./voucher-without-login.html" class="list-group-item list-group-item-action ">
+      <img class="icon" src="assets/images/category/voucher.svg" alt="" />
+      <span data-i18n="voucher_page.Redeem_Voucher"></span>
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="content col-7">
+    <div class="promotion__content__container row mx-0 gx-2">
+  <div class="promotion__content__container__item col-6" data-bannerimg="1" data-bs-toggle="modal" data-bs-target="#promotionDetail1Modal" data-aos="fade-up">
+    <img class="promotion__content__container__item__img" src="assets/images/promotion/1.png" alt="" />
+    <div class="promotion__content__container__item__title" data-i18n="promotion_page.title1"></div>
+  </div>
+  <div class="promotion__content__container__item col-6" data-bannerimg="2" data-bs-toggle="modal" data-bs-target="#promotionDetail2Modal" data-aos="fade-up">
+    <img class="promotion__content__container__item__img" src="assets/images/promotion/2.png" alt="" />
+    <div class="promotion__content__container__item__title" data-i18n="promotion_page.title2"></div>
+  </div>
+  <div class="promotion__content__container__item col-6" data-bannerimg="3" data-bs-toggle="modal" data-bs-target="#promotionDetail3Modal" data-aos="fade-up">
+    <img class="promotion__content__container__item__img" src="assets/images/promotion/3.png" alt="" />
+    <div class="promotion__content__container__item__title" data-i18n="promotion_page.title3"></div>
+  </div>
+  <div class="promotion__content__container__item col-6" data-bannerimg="4" data-bs-toggle="modal" data-bs-target="#promotionDetail4Modal" data-aos="fade-up">
+    <img class="promotion__content__container__item__img" src="assets/images/promotion/4.png" alt="" />
+    <div class="promotion__content__container__item__title" data-i18n="promotion_page.title4"></div>
+  </div>
+  <div class="promotion__content__container__item col-6" data-bannerimg="5" data-bs-toggle="modal" data-bs-target="#promotionDetail5Modal" data-aos="fade-up">
+    <img class="promotion__content__container__item__img" src="assets/images/promotion/5.png" alt="" />
+    <div class="promotion__content__container__item__title" data-i18n="promotion_page.title5"></div>
+  </div>
+  <div class="promotion__content__container__item col-6" data-bannerimg="6" data-bs-toggle="modal" data-bs-target="#promotionDetail6Modal" data-aos="fade-up">
+    <img class="promotion__content__container__item__img" src="assets/images/promotion/6.png" alt="" />
+    <div class="promotion__content__container__item__title" data-i18n="promotion_page.title6"></div>
+  </div>
+  <div class="promotion__content__container__item col-6" data-bannerimg="7" data-bs-toggle="modal" data-bs-target="#promotionDetail7Modal" data-aos="fade-up">
+    <img class="promotion__content__container__item__img" src="assets/images/promotion/7.png" alt="" />
+    <div class="promotion__content__container__item__title" data-i18n="promotion_page.title7"></div>
+  </div>
+</div>
+
+ <!-- MODAL -->
+ 
+<!-- Modal -->
+<div class="modal fade promotionDetailModal" id="promotionDetail1Modal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="promotionDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img class="mb-3 mt-2 bannerimg" src="assets/images/promotion/1.png" alt="" />
+      <div class="promotion-content">
+        <div class="promotion-content__title text-center text-uppercase text-decoration-underline" data-i18n="promotion_detail_page.detail1modal.JOIN_THE_EVENT_IN_JUST_3_STEPS"></div>
+        <div class="promotion-content__step row">
+          <div class="promotion-content__step__container col-4">
+            <div class="promotion-content__step__container__item">
+              <span class="promotion-content__step__container__item__count">1</span>
+              <div class="promotion-content__step__container__item__text" data-i18n="promotion_detail_page.detail1modal.step1_description"></div>
+            </div>
+          </div>
+          <div class="promotion-content__step__container col-4">
+            <div class="promotion-content__step__container__item">
+              <span class="promotion-content__step__container__item__count">2</span>
+              <div class="promotion-content__step__container__item__text" data-i18n="promotion_detail_page.detail1modal.step2_description"></div>
+            </div>
+          </div>
+          <div class="promotion-content__step__container col-4">
+            <div class="promotion-content__step__container__item">
+              <span class="promotion-content__step__container__item__count">3</span>
+              <div class="promotion-content__step__container__item__text" data-i18n="promotion_detail_page.detail1modal.step3_description"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="promotion-content__title text-center text-uppercase text-decoration-underline" data-i18n="promotion_detail_page.detail1modal.GET_EXTRA_CHANCES"></div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail1modal.Accumulate_total_deposit"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail1modal.Tickets"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>> SGD 100</td>
+              <td>x1</td>
+            </tr>
+            <tr>
+              <td>> SGD 1,000</td>
+              <td>x2</td>
+            </tr>
+            <tr>
+              <td>> SGD 5,000</td>
+              <td>x3</td>
+            </tr>
+            <tr>
+              <td>> SGD 10,000</td>
+              <td>x8</td>
+            </tr>
+            <tr>
+              <td>> SGD 30,000</td>
+              <td>1x5</td>
+            </tr>
+            <tr>
+              <td>> SGD 50,000</td>
+              <td>2x0</td>
+            </tr>
+            <tr>
+              <td>> SGD 100,000</td>
+              <td>3x0</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle2"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description21"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description22"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description23"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description24"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail1modal.description24_table.Ranking"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail1modal.description24_table.Prize_Reward"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span data-i18n="promotion_detail_page.detail1modal.description24_table.Top"></span> 1</td>
+              <td>Rolex 126610LV</td>
+            </tr>
+            <tr>
+              <td><span data-i18n="promotion_detail_page.detail1modal.description24_table.Top"></span> 2</td>
+              <td>Rolex 126610LN</td>
+            </tr>
+            <tr>
+              <td><span data-i18n="promotion_detail_page.detail1modal.description24_table.Top"></span> 3</td>
+              <td>Rolex 124050(<span data-i18n="promotion_detail_page.detail1modal.description24_table.No_date"></span>)</td>
+            </tr>
+            <tr>
+              <td><span data-i18n="promotion_detail_page.detail1modal.description24_table.Top"></span> 4 - 6</td>
+              <td>SGD 1,888 (<span data-i18n="promotion_detail_page.detail1modal.description24_table.Bonus"></span>)</td>
+            </tr>
+            <tr>
+              <td><span data-i18n="promotion_detail_page.detail1modal.description24_table.Top"></span> 7 - 10</td>
+              <td>SGD 888 (<span data-i18n="promotion_detail_page.detail1modal.description24_table.Bonus"></span>)</td>
+            </tr>
+            <tr>
+              <td><span data-i18n="promotion_detail_page.detail1modal.description24_table.Top"></span> 11 - 50</td>
+              <td>SGD 88 (<span data-i18n="promotion_detail_page.detail1modal.description24_table.Bonus"></span>)</td>
+            </tr>
+            <tr>
+              <td><span data-i18n="promotion_detail_page.detail1modal.description24_table.Top"></span> 51 - 100</td>
+              <td>SGD 33 (<span data-i18n="promotion_detail_page.detail1modal.description24_table.Bonus"></span>)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description25"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail1modal.description25_table.Deposit"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail1modal.description25_table.Draw_Ticket_Received"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SGD 100</td>
+              <td>1 <span data-i18n="promotion_detail_page.detail1modal.description25_table.ticket"></span></td>
+            </tr>
+            <tr>
+              <td>SGD 1,000</td>
+              <td>2 <span data-i18n="promotion_detail_page.detail1modal.description25_table.tickets"></span></td>
+            </tr>
+            <tr>
+              <td>SGD 5,000</td>
+              <td>3 <span data-i18n="promotion_detail_page.detail1modal.description25_table.tickets"></span></td>
+            </tr>
+            <tr>
+              <td>SGD 10,000</td>
+              <td>8 <span data-i18n="promotion_detail_page.detail1modal.description25_table.tickets"></span></td>
+            </tr>
+            <tr>
+              <td>SGD 30,000</td>
+              <td>15 <span data-i18n="promotion_detail_page.detail1modal.description25_table.tickets"></span></td>
+            </tr>
+            <tr>
+              <td>SGD 50,000</td>
+              <td>20 <span data-i18n="promotion_detail_page.detail1modal.description25_table.tickets"></span></td>
+            </tr>
+            <tr>
+              <td>SGD 100,000</td>
+              <td>30 <span data-i18n="promotion_detail_page.detail1modal.description25_table.tickets"></span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description26"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description27"></p>
+        <p class="promotion-content__subdescription" data-i18n="promotion_detail_page.detail3modal.description271"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description28"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description281"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description29"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description210"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail1modal.description211"></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal fade promotionDetailModal" id="promotionDetail2Modal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="promotionDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img class="mb-3 mt-2 bannerimg" src="assets/images/promotion/2.png" alt="" />
+      <div class="promotion-content">
+        <div class="promotion-content__title" data-i18n="promotion_page.title2"></div>
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle1"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description1"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description2"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description3"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail2modal.Product"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail2modal.Weekly_Cash_Back"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail2modal.Max_Bonus"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail2modal.Turnover"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="promotion_detail_page.detail2modal.All_Slots_Live_Casino"></td>
+              <td>6%</td>
+              <td>SGD1,688</td>
+              <td>x10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle2"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description21"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description22"></p>
+        <p class="promotion-content__subdescription" data-i18n="promotion_detail_page.detail2modal.description221"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description23"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description24"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description25"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description26"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description27"></p>
+        <p class="promotion-content__subdescription" data-i18n="promotion_detail_page.detail2modal.description271"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description28"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description29"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail2modal.description210"></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal fade promotionDetailModal" id="promotionDetail3Modal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="promotionDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img class="mb-3 mt-2 bannerimg" src="assets/images/promotion/3.png" alt="" />
+      <div class="promotion-content">
+        <div class="promotion-content__title" data-i18n="promotion_page.title3"></div>
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle1"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description1"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description11"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail3modal.table.Product"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail3modal.table.Deposit"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail3modal.table.Bonus"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail3modal.table.Turnover"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="promotion_detail_page.detail3modal.table.All_Slots_Games"></td>
+              <td>SGD50</td>
+              <td>SGD42</td>
+              <td>x15</td>
+            </tr>
+            <tr>
+              <td data-i18n="promotion_detail_page.detail3modal.table.All_Slots_Games"></td>
+              <td>SGD100</td>
+              <td>SGD85</td>
+              <td>x15</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle2"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description21"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description22"></p>
+        <p class="promotion-content__subdescription" data-i18n="promotion_detail_page.detail3modal.description221"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description23"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description24"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description241"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description25"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description26"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description27"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail3modal.description28"></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal fade promotionDetailModal" id="promotionDetail4Modal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="promotionDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img class="mb-3 mt-2 bannerimg" src="assets/images/promotion/4.png" alt="" />
+      <div class="promotion-content">
+        <div class="promotion-content__title" data-i18n="promotion_page.title4"></div>
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle1"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description1"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description11"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail4modal.table.DEPOSIT"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail4modal.table.PERCENTAGE"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail4modal.table.MAX_BONUS_AMOUNT"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail4modal.table.ROLLOVER_REQ"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="promotion_detail_page.detail4modal.table.1st_Deposit"></td>
+              <td>100% <span data-i18n="promotion_detail_page.detail4modal.table.Bonus"></span></td>
+              <td>SGD188</td>
+              <td>x25</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle2"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description21"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description22"></p>
+        <p class="promotion-content__subdescription" data-i18n="promotion_detail_page.detail4modal.description221"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description23"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description24"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description25"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description251"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description26"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description27"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description28"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail4modal.description29"></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal fade promotionDetailModal" id="promotionDetail5Modal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="promotionDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img class="mb-3 mt-2 bannerimg" src="assets/images/promotion/5.png" alt="" />
+      <div class="promotion-content">
+        <div class="promotion-content__title" data-i18n="promotion_page.title5"></div>
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle1"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description11"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description12"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description13"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail5modal.table.Min_Per_Bet"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail5modal.table.Merchant"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail5modal.table.Bonus"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail5modal.table.Requirement"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail5modal.table.Turnover"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SGD100</td>
+              <td data-i18n="promotion_detail_page.detail5modal.table.Lose_7_consecutive_games"></td>
+              <td>SGD350</td>
+              <td data-i18n="promotion_detail_page.detail5modal.table.Daily_ONCE"></td>
+              <td>x4</td>
+            </tr>
+            <tr>
+              <td>SGD500</td>
+              <td data-i18n="promotion_detail_page.detail5modal.table.Lose_7_consecutive_games"></td>
+              <td>SGD1750</td>
+              <td data-i18n="promotion_detail_page.detail5modal.table.Daily_ONCE"></td>
+              <td>x4</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle2"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description21"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description22"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description23"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description24"></p>
+        <p class="promotion-content__subdescription" data-i18n="promotion_detail_page.detail5modal.description241"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description25"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description251"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description26"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description27"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail5modal.description28"></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal fade promotionDetailModal" id="promotionDetail6Modal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="promotionDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img class="mb-3 mt-2 bannerimg" src="assets/images/promotion/6.png" alt="" />
+      <div class="promotion-content">
+        <div class="promotion-content__title" data-i18n="promotion_page.title6"></div>
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle1"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description1"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description11"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail6modal.table.Product"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail6modal.table.Bonus"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail6modal.table.Max_Bonus"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail6modal.table.Turnover"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="promotion_detail_page.detail6modal.table.All_products_except_4D_Lottery"></td>
+              <td>5%</td>
+              <td data-i18n="promotion_detail_page.detail6modal.table.Unlimited"></td>
+              <td>x5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle2"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description21"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description22"></p>
+        <p class="promotion-content__subdescription" data-i18n="promotion_detail_page.detail6modal.description221"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description23"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description24"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description241"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description25"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description26"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail6modal.description27"></p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- Modal -->
+<div class="modal fade promotionDetailModal" id="promotionDetail7Modal" tabindex="-1" data-bs-keyboard="false" aria-labelledby="promotionDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="text-end">
+        <button type="button" class="btn-close close-button" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <img class="mb-3 mt-2 bannerimg" src="assets/images/promotion/7.png" alt="" />
+      <div class="promotion-content">
+        <div class="promotion-content__title" data-i18n="promotion_page.title7"></div>
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle1"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description1"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description11"></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="promotion_detail_page.detail7modal.table.Product"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail7modal.table.Weekly_Cash_Back"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail7modal.table.Max_Bonus"></th>
+              <th scope="col" data-i18n="promotion_detail_page.detail7modal.table.Turnover"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="promotion_detail_page.detail7modal.table.Sports_E_Sports"></td>
+              <td>6%</td>
+              <td data-i18n="promotion_detail_page.detail7modal.table.Unlimited"></td>
+              <td data-i18n="promotion_detail_page.detail7modal.table.NO_TURNOVER"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="promotion-content__subtitle" data-i18n="promotion_detail_page.subtitle2"></div>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description21"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description22"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description23"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description24"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description25"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description26"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description27"></p>
+        <p class="promotion-content__description" data-i18n="promotion_detail_page.detail7modal.description28"></p>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- MODAL -->
+  </div>
+  <div class="right col-3">
+    
+      <section class="home">
+  <div class="home__content">
+    <div
+      class="home__content__exclusive_event home-section pt-0"
+      data-aos="fade-up" data-aos-delay="500"
+    >
+      <div class="d-flex justify-content-start align-items-center gap-2 mb-3">
+        <span data-i18n="home_page.Hot" class="label"></span>
+        <div data-i18n="home_page.Exclusive_Event" class="title mb-0"></div>
+      </div>
+      <div class="home__content__exclusive_event__content">
+        <div class="home__content__exclusive_event__content__header">
+          <div
+            class="home__content__exclusive_event__content__header__title"
+            data-i18n="home_page.Millions_Subsidy"
+          ></div>
+          <span
+            class="home__content__exclusive_event__content__header__total-prize"
+          >
+            <span data-i18n="home_page.Total_prize"></span>: SGD 345,000
+          </span>
+          <img
+            class="home__content__exclusive_event__content__header__icon"
+            src="assets/images/exclusive-event-icon.png"
+            alt=""
+          />
+        </div>
+        <div class="home__content__exclusive_event__content__item pt-4">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__item pb-4">
+          <div class="d-flex align-items-center gap-2">
+            <img src="assets/icons/user-blue.svg" alt="" />
+            <div class="">
+              <div class="username">**ng89</div>
+              <div class="name">Cai Shen 888</div>
+            </div>
+          </div>
+          <div>
+            <div class="price">SGD 932</div>
+            <div class="date">14/5/2022</div>
+          </div>
+        </div>
+        <div class="home__content__exclusive_event__content__action">
+          <a
+            href="./exclusive-event-without-login.html"
+            class="btn btn-warning"
+            data-i18n="home_page.Learn_More"
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home__content__luck_surprise" data-aos="fade-up" data-aos-delay="1000">
+      <div class="home__content__luck_surprise__title">
+        <div
+          class="home__content__luck_surprise__title__left"
+          data-i18n="home_page.LUCK"
+        ></div>
+        <img
+          class="home__content__luck_surprise__title__icon"
+          src="assets/images/luck-surprise-icon.png"
+          alt=""
+        />
+        <div
+          class="home__content__luck_surprise__title__right"
+          data-i18n="home_page.SURPRISE"
+        ></div>
+      </div>
+      <div
+        class="home__content__luck_surprise__subtitle"
+        data-i18n="home_page.Uwin33_Mascot"
+      ></div>
+    </div>
+
+    <div class="home__content__gaming_licenses home-section" data-aos="fade-up" data-aos-delay="1500">
+      <div data-i18n="home_page.Gaming_Licenses" class="title"></div>
+      <div class="home__content__gaming_licenses__content">
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/1.png"
+          alt=""
+        />
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/2.png"
+          alt=""
+        />
+        <img
+          class="home__content__gaming_licenses__content__img"
+          src="assets/images/gaming-licenses/3.png"
+          alt=""
+        />
+        <!-- <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/1.png" alt="" />
+        </div>
+        <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/2.png" alt="" />
+        </div>
+        <div class="home__content__gaming_licenses__content__img">
+          <img src="assets/images/gaming-licenses/3.png" alt="" />
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  </div>
+</div>
+
+<!-- MODAL -->
+<!-- Modal -->
+<div
+  class="modal fade alert"
+  id="vpnModal"
+  tabindex="-1"
+  aria-labelledby="vpnModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="mx-auto my-3" src="assets/images/vpn-icon.svg" alt="" />
+        <div class="title text-white" data-i18n="vpn_modal_title"></div>
+        <div class="text mb-3 mt-4 text-muted" data-i18n="vpn_modal_title_description"></div>
+        <div class="action">
+          <a href="" class="btn btn-warning btn-confirm px-4" data-i18n="Open_Chat"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+        
+      </div>
+
+      
+      <div class="footer">
+  <div class="container">
+    <img class="footer__logo mb-5" src="assets/icons/logo.png" alt="" />
+    <!-- <div class="footer__copy_right" data-i18n="footer_section.copy_right"></div> -->
+
+    <div class="row">
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Have_any_question"
+          ></div>
+          <div class="footer__items__item question">
+            <a href="#">
+              <img src="assets/images/question/1.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/question/2.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Security_Trust"
+          ></div>
+          <div class="footer__items__item gap-3 security-trust">
+            <a href="#">
+              <img src="assets/images/security-trust/1.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/security-trust/2.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Social_Media"
+          ></div>
+          <div class="footer__items__item social">
+            <a href="#">
+              <img src="assets/images/social/1.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/social/2.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/social/3.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/social/4.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Responsible_Gaming"
+          ></div>
+          <div class="footer__items__item gap-3 responsible-gaming">
+            <a href="#">
+              <img src="assets/images/responsible-gaming/1.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/responsible-gaming/2.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="assets/images/responsible-gaming/3.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="footer__items mb-5">
+          <div
+            class="footer__items__title text-uppercase text-muted"
+            data-i18n="footer_section.Certification"
+          ></div>
+          <div class="footer__items__item certification">
+            <a href="#">
+              <img src="assets/images/certification/1.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar nav-footer navbar-expand-lg">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.Responsible_Gaming"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.About_Us">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.About_Us">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-0 pe-5 text-muted fs-12" href="#" data-i18n="menu.TermsConditions">Pricing</a>
+          </li>
+        </ul>
+        <span class="fs-12 text-muted" data-i18n="footer_section.copy_right"></span>
+      </div>
+    </nav>
+
+    <!-- <div class="d-flex gap-5">
+      <div class="footer__items">
+        <div class="footer__items__title" data-i18n="footer_section.Security_Trust"></div>
+        <div class="footer__items__item gap-3 security-trust">
+          <a href="#">
+            <img src="assets/images/security-trust/1.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="assets/images/security-trust/2.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="footer__items">
+      <div class="footer__items__title" data-i18n="footer_section.Certification"></div>
+      <div class="footer__items__item certification">
+        <a href="#">
+          <img src="assets/images/certification/1.png" alt="" />
+        </a>
+      </div>
+    </div> -->
+
+    <!-- <div class="footer__items">
+      <div class="footer__items__title" data-i18n="footer_section.Payment_Method"></div>
+      <div class="footer__items__item payment-method">
+        <a href="#">
+          <img src="assets/images/payment-method.png" alt="" />
+        </a>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+    </section>
+    
+    <!-- SCRIPT -->
+<!-- JQUERY -->
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"
+  crossorigin="anonymous"
+></script>
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<!-- Translator -->
+<script src="assets/library/translator.min.js" defer ></script>
+<!-- <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js" defer></script> -->
+<!-- Bootstrap Bundle with Popper -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+
+<script src="assets/library/slick/slick.min.js"></script>
+
+<!-- CUSTOM -->
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/bundle.js" defer></script>
+
+  </body>
+</html>
